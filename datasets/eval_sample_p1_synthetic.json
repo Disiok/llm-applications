@@ -1,0 +1,704 @@
+{
+    "queries": {
+        "366409ba-e815-4ce8-a958-b60608049a05": "What is the difference between the \"resume\" and \"resume_async\" functions in the Workflow Management API?",
+        "ee1205f1-cfa5-43ee-b63a-314aa8041b08": "How can you retrieve the output of a running workflow using the Workflow Management API?",
+        "12221fe0-7e88-4334-889c-012717d822d3": "What is the purpose of the EpsilonGreedy.on_episode_start method in the Ray RLlib library?",
+        "5140928d-2eb9-4655-9c29-f5a201da6b6a": "How does the EpsilonGreedy.on_episode_start method handle exploration logic at the beginning of an episode?",
+        "7adcc93d-37f7-44c8-b639-cbff7f3d2ce2": "What is the purpose of the ProgressReporter class in the given context?",
+        "4d08cdff-b84d-453d-b66d-bab9e86e2af9": "How does the ProgressReporter class report progress across trials?",
+        "d6523f68-1bb0-43d8-baf1-81e33bb5597e": "How does the on_trial_start callback function in Ray Tune work? Explain its parameters and their significance in the tuning loop.",
+        "5dbe60b8-1fe8-4d27-8c93-5628601741b7": "In what scenario would the on_trial_start callback be useful? Provide an example of how it can be used to enhance the performance of a trial in Ray Tune.",
+        "93013643-0205-44de-b990-81cde41e601f": "What are the steps involved in starting a Ray cluster and deploying Ray applications on Kubernetes? How can this be achieved?",
+        "aa33a965-c0e2-468f-a2d2-abc250cbe002": "How can you integrate KubeRay with third-party Kubernetes ecosystem tools? Provide some examples of these tools and explain their role in the integration process.",
+        "1252b00c-b048-4c8c-9501-918857e2f98d": "What is the purpose of the `TensorflowCheckpoint.__init__` method?",
+        "2c131d62-cb44-48d9-966c-e918e347ba03": "How does the `filesystem` parameter in the `TensorflowCheckpoint.__init__` method affect the path parameter?",
+        "433b80f9-8279-4f32-b213-aeec218c3994": "What are the two types of remote URIs supported for hosting working_dir and py_modules packages?",
+        "aae517d9-8581-48e8-ab91-31224bc141e2": "How can you compress a directory into a zip file and ensure that it contains only a single top-level directory?",
+        "4e6c0c54-6ce8-4dcb-8a6c-113a135fb1c4": "What is the purpose of the method `RolloutWorker.get_node_ip()` in the Ray RLlib library?",
+        "edd31bb8-18c9-473d-88f4-0226b58900f3": "How can the `RolloutWorker.get_node_ip()` method be used to obtain the IP address of the node on which the worker is running in Ray RLlib?",
+        "180c849b-1fad-4715-9d3a-8b5944e8c9e6": "What does the method `get_optimizer_state()` in the `Learner` class return?",
+        "b6b8fa19-fb1b-4528-b26d-2515fb00b091": "How can the `get_optimizer_state()` method be used in the `Learner` class to retrieve the state of all optimizers?",
+        "e08b62ff-9576-4947-981c-2ed5a5a9427e": "What is the purpose of the \"ScalingConfig.resources_per_worker\" attribute in the given context?",
+        "fec1b2a8-92ba-4e17-942e-92979ef21df6": "Can you explain the possible values that can be assigned to the \"ScalingConfig.resources_per_worker\" attribute?",
+        "2fb4df34-ad69-4582-9eba-9f2578486e64": "In the NumPy code snippet, what is the purpose of the normalize_images function and how does it transform the groups?",
+        "86f6eade-5884-4e52-948d-cd8c4a81df2a": "In the pandas code snippet, what is the purpose of the normalize_features function and how does it transform the groups?",
+        "49a60453-5193-4f12-b29c-6075b803a080": "How does Ray limit the concurrency of tasks and actors?",
+        "5b9a67d0-3046-464e-a743-e9eca46501a7": "What issues can arise if tasks or actors use more memory than their proportionate share?",
+        "c7940e28-8518-4352-a324-671190aedd81": "What is the purpose of using the \"Result.metrics_dataframe\" function in the given context? How does it help in retrieving the reported metrics?",
+        "a1f081b9-9507-488c-81d4-7fb2ce4d2f18": "How can the \"Minimum loss\" be determined using the pandas DataFrame obtained from the \"Result.metrics_dataframe\" function?",
+        "83a218ca-61d1-4b2e-a004-0c759a368653": "Explain the purpose of the `ray.remote` decorator in the code example.",
+        "c6afd274-d629-4d89-be26-e350c9874f5d": "How does the `Trainer` class use the `fit` method to train the model?",
+        "81dd9357-a9be-43f2-9c5d-a1dd7c9dc4dc": "What is the purpose of the SearchAlgorithm object in the given source code?",
+        "2a3ce491-6d1c-4978-94f7-3526baaf48ad": "How does the SearchAlgorithm object interact with the trials during the training process?",
+        "0b15276a-7c7a-47ee-8536-16a674bb2040": "How can the ExecutionOptions API be used in a programming context?",
+        "85076d3d-ff13-4738-8908-1cdb5ba8994e": "What is the role of the ExecutionOptions API in the overall execution of a program?",
+        "169d0651-304e-427b-8356-79bf9628d4cd": "What are the potential challenges or limitations of running Ray on Windows?",
+        "9ce01203-a7c6-4bb5-823b-7d33289aa959": "How does the performance of Ray on Windows compare to other operating systems, and what is the main factor contributing to this difference?",
+        "b7bc08e6-ab01-4c86-8c9d-a56ccfc07856": "How can you retrieve a placement group with a global name in Ray cluster?",
+        "8bc8fbf1-876a-4e2c-ab32-bab5a34a0f96": "What is the difference between a globally named placement group and a non-global named placement group in C++?",
+        "31bb3056-8858-46d6-b619-c195c7d42a45": "What are the key metrics used to benchmark Ray Serve's performance? How does Ray Serve perform in terms of latency, throughput, and scalability?",
+        "5c8a4b99-ccb7-4cef-88a4-8b02474190d4": "Describe the benchmark results for the \"Single Deployment\" and \"Multiple Deployments\" scenarios. What are the average latencies, throughputs, and transfer rates observed in these benchmarks?",
+        "447c75dc-24b3-4bac-9e4e-ae66909e049a": "How does batch prediction work in the context of machine learning?",
+        "8d4d04a9-d11c-4789-b7b6-bb369f8c351c": "What are the advantages of using Ray Core for batch prediction compared to Ray Data?",
+        "47624de0-1783-4c85-999e-c8a3b83a432c": "How does the SigOptSearch.on_trial_complete method handle failed trials in the optimization process?",
+        "d59e81c0-a82c-433e-8143-f7e733696eef": "What is the purpose of creating a SigOpt Observation object for each trial in the SigOptSearch.on_trial_complete method?",
+        "7f284ae8-c882-4b37-83e0-a07c9b194abb": "What is the purpose of the `Dataset.default_batch_format()` method in the Ray library?",
+        "d70039e2-00d7-4dc3-879b-01028c60c4d8": "Why is the `Dataset.default_batch_format()` method considered deprecated and likely to be removed in future Ray releases?",
+        "19dd36db-845b-48c1-a090-9cc3114c6dfc": "What is the purpose of the capacity parameter in the initialization of the ReplayBuffer class?",
+        "d710c0fb-a49b-478c-b678-106f20e7b44f": "Explain the difference between the 'timesteps', 'sequences', and 'episodes' options for the storage_unit parameter in the ReplayBuffer class.",
+        "9f55b226-a029-4fc0-a7e4-30375f44d96f": "What are the reasons why running multiple Ray Tune jobs on the same cluster at the same time is not recommended?",
+        "7010a7bf-cc2d-476d-bd95-bb79aeb76f49": "Can you explain the potential challenges and drawbacks of running concurrent Ray Tune jobs on the same cluster?",
+        "3c6aeee0-4aba-435f-bffe-7f53c0aedbd2": "What is the purpose of using the Ray Client?",
+        "eeb9fd61-5f24-4b52-9c2e-06e0d4a18c2d": "Can you explain the steps involved in setting up the Ray Client?",
+        "6ca2a3ca-bf95-4f42-b40f-4f07ab610f51": "What is the purpose of the `do_write()` function in the `Datasource` class?",
+        "e22f99f2-1255-469c-b39d-7a6c19853e9c": "Why is the `do_write()` function deprecated in Ray 2.4 and what should be used instead?",
+        "19cd44da-b362-48bf-8c5f-2ac1113932ae": "What is the purpose of the `@PublicAPI` decorator in the given source code? How does it differ from the `@DeveloperAPI` and `@ExperimentalAPI` decorators?",
+        "c7b0155c-cf35-42e2-bbfc-193b5cd98cd4": "Explain the use of the `@OverrideToImplementCustomLogic` and `@OverrideToImplementCustomLogic_CallToSuperRecommended` decorators in the source code. How do these decorators indicate that a method needs to be overridden in a subclass?",
+        "9da9c657-669e-4fc5-ac20-77c1dae63724": "How can we interact with an actor in Ray by calling its methods with the remote operator? How do we retrieve the actual value of the method call?",
+        "0254a444-7252-4fbf-83c8-1d586d0813c4": "Explain the difference between methods called on different actors and methods called on the same actor in Ray. How does state sharing work for methods on the same actor?",
+        "758b1be9-d69e-497c-8856-eb0c39da59dd": "How can models be used in various fields and industries?",
+        "f0d1784c-ae69-444c-a3b5-a2bbfa0c611b": "What are the key steps involved in creating a model for a specific problem or scenario?",
+        "66921e6f-1a28-4ce0-a181-2f935335480d": "What is the purpose of the `preferred_batch_format` method in the `RobustScaler` class?",
+        "c07fe9b0-1648-4c72-bd2c-224a4bf2768f": "How can the `preferred_batch_format` be overridden by other Preprocessor classes?",
+        "ac5a7048-35df-446c-b4b1-702a2e3d759c": "Explain the purpose of the CustomPreprocessor class in the given code. How does it fit into the data preprocessing pipeline?",
+        "7a793760-69c9-45d7-9cd6-c33c20177c1a": "In the given code, what is the role of the `_fit` method in the CustomPreprocessor class? How does it calculate the `stats_` attribute?",
+        "1ede58d4-1c08-426f-882b-5af259ab4b74": "What is the purpose of calling Tuner.fit() in Tune? How does it contribute to the overall functionality of Tune?",
+        "b55da8c2-43fc-4e1f-b4c5-3dce1eb5c138": "Can you explain the lifecycle of a Tune trial? What are the different stages involved and how do they impact the execution of Tune?",
+        "a4940d6a-e3c5-4b7d-8375-0acafe94a430": "What method should be called to save text in different formats using Ray Data?",
+        "b1908f36-9e38-44f7-9525-314e700684de": "How can you save text in Parquet format using Ray Data?",
+        "c5d6c5e4-c05e-4e91-9acb-f136dc1ef39c": "How does Tune automatically sync the log directory with the driver in a distributed execution?",
+        "6ace8e10-4984-4030-a58d-caa9c664b6c1": "What is the significance of changing the current working directory to the log directory in the context of Trainable in Ray Tune?",
+        "a8ce37fb-3a5a-49d8-8d7e-96ceb996d0f2": "What is the purpose of the make_model() method in the TorchPolicyV2 class?",
+        "2a8415d2-358f-47bb-9923-36bc896604b6": "Can the make_model() method be overridden in the TorchPolicyV2 class? If so, what is the alternative method that can be overridden?",
+        "340026a3-fbba-4190-a738-b27cd1483f13": "What is the purpose of using the `ray.tune.with_parameters` wrapper function in the Ray library?",
+        "d43e22a4-dd34-465b-8178-0dab7596c7b4": "Explain the difference between using `ray.tune.with_parameters` with the function API and the class API, based on the provided examples.",
+        "cb043198-e546-4570-a419-705701eb1b67": "What is the purpose of using a distributed training function and a Ray Train Trainer in the training process?",
+        "3088c78c-e214-4796-a482-bdf603efa464": "How can the Ray Train Trainer be used to start the training process and what is the expected output?",
+        "124042ce-692b-4694-833a-67dc4c720f84": "What is the purpose of the SampleBatch.clear() method in the Ray RLlib library?",
+        "5f1cbb82-60df-404f-bdee-378e1faebc97": "How does the SampleBatch.clear() method in Ray RLlib help in managing data in the D object?",
+        "2061989c-30b6-4a21-955b-b5f0f5f297c4": "What is the purpose of assigning a reviewer to a pull request in the ray-project organization? How does this process help ensure the quality of the code being contributed?",
+        "98b2865d-dd86-4edd-957c-189fc29d7a30": "Explain the role of assignees in the pull request review process. How do they communicate their feedback to the author, and what actions are required from the author to address their comments?",
+        "1ff92a92-04f2-4995-8139-dc56ab0540c9": "What is the purpose of the \"ray.tune.search.flaml.CFO#\" alias in the context of the document?",
+        "e1a28618-27fb-4519-9671-6e16c7b9d24c": "How does the \"ray.tune.search.flaml.CFO#\" alias relate to the overall functionality of the flaml_search module?",
+        "f817ddac-e61b-463a-8608-43304e23cd2f": "How does the \"SPREAD\" strategy work in Ray?",
+        "05383f10-cb11-419e-9133-cb6a0d464b5c": "What is the purpose of using the @ray.remote decorator with the scheduling_strategy parameter set to \"SPREAD\"?",
+        "09a36f8a-d1a8-42d8-961a-748b072abbeb": "What is the purpose of the ReservoirReplayBuffer.stats() method in the Ray RLlib library?",
+        "15f69e34-7d76-4b18-82db-834d1529ac7c": "How can the debug parameter be used in the ReservoirReplayBuffer.stats() method?",
+        "8459b6fc-3776-428c-b410-859c7706a407": "What are the components of a Policy's state other than model weights?",
+        "ba4871ce-084a-4733-99e8-c779ac73be7d": "How can we access the model weights in the Policy class?",
+        "8f8d4c11-0eea-4969-aaca-44415960bf2d": "How can you implement Dask-level scheduler and task introspection using Ray-specific callbacks? Provide an example.",
+        "a6115ade-10c3-41e7-a94d-d91ed398c54f": "How can you measure and log the execution time of each task using Ray-specific callbacks? Provide an example.",
+        "2e83c5f2-21fd-4613-a0fa-b0585512f11a": "How can the tf_input_ops() method be used to integrate custom model losses in TensorFlow?",
+        "d23bad62-2e4b-4ba0-b0ef-c02634945a30": "Can you provide an example of how the tf_input_ops() method can be used in a custom loss function for a model?",
+        "03f3d7f5-0ccf-4a48-a706-b92a367aa4cb": "What does the method \"SingleAgentRLModuleSpec.to_dict()\" in the \"rl_module\" module of the \"ray.rllib.core\" package return?",
+        "31cf38c4-5409-40e4-ac5e-3cce4d402e1d": "How does the method \"SingleAgentRLModuleSpec.to_dict()\" in the \"rl_module\" module of the \"ray.rllib.core\" package contribute to the serialization of the spec?",
+        "ba55dd3b-cd20-4ac8-85c5-13c76b38ca29": "What is the recommended alternative to the ExperimentAnalysis class in the tune.run API?",
+        "5015d3d5-9fd7-4b6b-a15e-d15617c0d6ba": "What is the purpose of the ExperimentAnalysis class in the Tune library?",
+        "183b6f56-1a9a-496c-8276-b5003f375e98": "What is the purpose of the \"trial_id\" property in the Algorithm class of the ray.rllib package?",
+        "d8fb54aa-dc61-43ee-961c-6af6ecbcad46": "How can the trial_id property be accessed in the Algorithm class of the ray.rllib package?",
+        "58d9ae64-a92e-4b93-b86f-7cb56f96d53f": "What is the purpose of the `Algorithm.step()` method in the `Algorithm` class?",
+        "67bdc761-e0a7-40f7-8bc5-42fb8b0dc02c": "How can the `Algorithm.step()` method be customized in sub-classes of `Algorithm`?",
+        "73165abd-1f02-40b2-b7ff-57236ef02918": "What is the purpose of the \"explore\" parameter in the AlgorithmConfig.exploration() function?",
+        "88346b33-cc86-4264-a65d-b43cba5927ca": "How can the exploration behavior be disabled in the AlgorithmConfig.exploration() function?",
+        "6af8ee61-3aec-42d1-8aa4-04ef9f8458ac": "True or False: Enabling the use of internal IP addresses in Ray affects the existence of public IP addresses for the nodes.",
+        "711d9b3e-b618-4413-b7fa-d31ee4c2404f": "What is the purpose of the provider.use_internal_ips option in Ray?",
+        "d433be17-0d36-4524-b152-6cb3e848f29f": "How can the SigOpt experiment and space specification be used to specify a search space?",
+        "2ec93078-b394-4914-a5c5-2ae7040f3190": "What is the purpose of the SigOptSearch wrapper in the SigOpt framework?",
+        "ac1e6487-7275-4fe6-91f8-d13173879f3d": "What is the purpose of the \"ray.cross_language.java_function\" function in the given context? Explain its parameters and their significance.",
+        "51e0f9d7-94c6-4306-8c84-61b4553cd2c7": "How does the \"ray.cross_language.java_function\" function differ from other functions in the document? Discuss its beta status and the potential implications for its usage.",
+        "d2eb1f3e-8e24-4bb3-b4c4-5bf00fd1aaee": "What is the purpose of the `ZeRO3Config` class in the Lightning Module?",
+        "8059d4f2-69b1-4f33-b99d-641f1273e803": "How does the `Vicuna13BModel` class enable tf32 for better performance?",
+        "aa7e7e84-c8ee-43e1-b874-1fc91a36cdfe": "What is the purpose of the method \"Learner._check_is_built()\" in the Ray RLlib library?",
+        "b219ba68-17df-4228-8d04-700166fa3542": "How does the \"Learner._check_is_built()\" method contribute to the functionality of the Ray RLlib library?",
+        "64c2979f-6d66-4b31-9cca-51ac6ca9d61a": "What does the ReplayBuffer.stats() method return and what are its parameters?",
+        "c4610393-e834-462b-ae08-333f8a99dd38": "How can the debug parameter be used in the ReplayBuffer.stats() method and what additional information does it provide in the returned stats dictionary?",
+        "ed51d2f2-6706-484f-8c15-9b26d7339953": "What is the recommended solution to prevent the loop of restarting the RayCluster when the Kubernetes cluster runs out of resources?",
+        "fa92275b-b17a-4f39-8dae-0903898a7867": "How can you reproduce the issue of a loop of restarting the RayCluster when the Kubernetes cluster does not have enough resources?",
+        "b439166b-63d5-4508-a9df-6d1c0903b9a7": "What is the purpose of using early stopping schedulers in Tune experiments? How do they work?",
+        "f9966f4b-2a8a-4a67-9478-8c93f222d23a": "Can you explain the difference between AsyncHyperBandScheduler and HyperBandForBOHB? How do they contribute to early stopping in Tune?"
+    },
+    "corpus": {
+        "fe03ac03-91ea-4289-a8b6-a21a1a5c0cf0": {
+            "source": "https://docs.ray.io/en/master/workflows/api/management.html#workflow-management-api",
+            "text": "Workflow Management API#\n\n\n\n\n\n\nresume(workflow_id)\nResume a workflow.\n\nresume_async(workflow_id)\nResume a workflow asynchronously.\n\nresume_all([include_failed])\nResume all resumable workflow jobs.\n\nlist_all([status_filter])\nList all workflows matching a given status filter.\n\nget_status(workflow_id)\nGet the status for a given workflow.\n\nget_output(workflow_id,\u00a0*[,\u00a0task_id])\nGet the output of a running workflow.\n\nget_output_async(workflow_id,\u00a0*[,\u00a0task_id])\nGet the output of a running workflow asynchronously.\n\nget_metadata(workflow_id[,\u00a0task_id])\nGet the metadata of the workflow.\n\ncancel(workflow_id)\nCancel a workflow. Workflow checkpoints will still be saved in storage. To\n\n\n\n\n\n"
+        },
+        "fa0c7643-3a43-4722-a317-e5ebe9f5185d": {
+            "source": "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.utils.exploration.epsilon_greedy.EpsilonGreedy.on_episode_start.html#ray-rllib-utils-exploration-epsilon-greedy-epsilongreedy-on-episode-start",
+            "text": "ray.rllib.utils.exploration.epsilon_greedy.EpsilonGreedy.on_episode_start#\n\n\nEpsilonGreedy.on_episode_start(policy: Policy, *, environment: ray.rllib.env.base_env.BaseEnv = None, episode: int = None, tf_sess: Optional[tf.Session] = None)#\nHandles necessary exploration logic at the beginning of an episode.\n\nParameters\n\npolicy \u2013 The Policy object that holds this Exploration.\nenvironment \u2013 The environment object we are acting in.\nepisode \u2013 The number of the episode that is starting.\ntf_sess \u2013 In case of tf, the session object.\n\n\n\n\n\n\n"
+        },
+        "0b1a5785-bcd3-4a54-970c-3e83bc164f60": {
+            "source": "https://docs.ray.io/en/master/tune/api/reporters.html#reporter-interface-tune-progressreporter",
+            "text": "Reporter Interface (tune.ProgressReporter)#\n\n\n\n\n\n\nProgressReporter()\nAbstract class for experiment progress reporting.\n\n\n\n\n\n\n\n\n\nProgressReporter.report(trials,\u00a0done,\u00a0*sys_info)\nReports progress across trials.\n\nProgressReporter.should_report(trials[,\u00a0done])\nReturns whether or not progress should be reported.\n\n\n\n\n\n"
+        },
+        "22047536-dbeb-4f2a-92bb-1dec5e4300ff": {
+            "source": "https://docs.ray.io/en/master/tune/api/doc/ray.tune.Callback.on_trial_start.html#ray-tune-callback-on-trial-start",
+            "text": "ray.tune.Callback.on_trial_start#\n\n\nCallback.on_trial_start(iteration: int, trials: List[Trial], trial: Trial, **info)[source]#\nCalled after starting a trial instance.\n\nParameters\n\niteration \u2013 Number of iterations of the tuning loop.\ntrials \u2013 List of trials.\ntrial \u2013 Trial that just has been started.\n**info \u2013 Kwargs dict for forward compatibility.\n\n\n\n\n\n\n"
+        },
+        "8c515fd2-9bb0-488a-8402-cf46487de6cc": {
+            "source": "https://docs.ray.io/en/master/cluster/kubernetes/index.html#learn-more",
+            "text": "Learn More#\nThe Ray docs present all the information you need to start running Ray workloads on Kubernetes.\n\n\n\n\n\nGetting Started\n\n\nLearn how to start a Ray cluster and deploy Ray applications on Kubernetes.\n\n\nGet Started with Ray on Kubernetes\n\n\n\n\n\n\nUser Guides\n\n\nLearn best practices for configuring Ray clusters on Kubernetes.\n\n\nRead the User Guides\n\n\n\n\n\n\nExamples\n\n\nTry example Ray workloads on Kubernetes.\n\n\nTry example workloads\n\n\n\n\n\n\nEcosystem\n\n\nIntegrate KubeRay with third party Kubernetes ecosystem tools.\n\n\nEcosystem Guides\n\n\n\n\n\n\nBenchmarks\n\n\nCheck the KubeRay benchmark results.\n\n\nBenchmark results\n\n\n\n\n\n\nTroubleshooting\n\n\nConsult the KubeRay troubleshooting guides.\n\n\nTroubleshooting guides\n\n\n\n\n\n\n\n"
+        },
+        "733ddff6-e53a-4723-bde3-e972ddcff520": {
+            "source": "https://docs.ray.io/en/master/train/api/doc/ray.train.tensorflow.TensorflowCheckpoint.__init__.html#ray-train-tensorflow-tensorflowcheckpoint-init",
+            "text": "ray.train.tensorflow.TensorflowCheckpoint.__init__#\n\n\nTensorflowCheckpoint.__init__(path: Union[str, os.PathLike], filesystem: Optional[pyarrow._fs.FileSystem] = None)#\nConstruct a Checkpoint.\n\nParameters\n\npath \u2013 A local path or remote URI containing the checkpoint data.\nIf a filesystem is provided, then this path must NOT be a URI.\nIt should be a path on the filesystem with the prefix already stripped.\nfilesystem \u2013 PyArrow FileSystem to use to access data at the path.\nIf not specified, this is inferred from the URI scheme.\n\n\n\n\n\n\n"
+        },
+        "86297301-2e6a-47fa-8289-007cd99f1a94": {
+            "source": "https://docs.ray.io/en/master/ray-core/handling-dependencies.html#remote-uris",
+            "text": "Remote URIs#\nThe working_dir and py_modules arguments in the runtime_env dictionary can specify either local path(s) or remote URI(s).\nA local path must be a directory path. The directory\u2019s contents will be directly accessed as the working_dir or a py_module.\nA remote URI must be a link directly to a zip file. The zip file must contain only a single top-level directory.\nThe contents of this directory will be directly accessed as the working_dir or a py_module.\nFor example, suppose you want to use the contents in your local /some_path/example_dir directory as your working_dir.\nIf you want to specify this directory as a local path, your runtime_env dictionary should contain:\nruntime_env = {..., \"working_dir\": \"/some_path/example_dir\", ...}\n\n\nSuppose instead you want to host your files in your /some_path/example_dir directory remotely and provide a remote URI.\nYou would need to first compress the example_dir directory into a zip file.\nThere should be no other files or directories at the top level of the zip file, other than example_dir.\nYou can use the following command in the Terminal to do this:\ncd /some_path\nzip -r zip_file_name.zip example_dir\n\n\nNote that this command must be run from the parent directory of the desired working_dir to ensure that the resulting zip file contains a single top-level directory.\nIn general, the zip file\u2019s name and the top-level directory\u2019s name can be anything.\nThe top-level directory\u2019s contents will be used as the working_dir (or py_module).\nYou can check that the zip file contains a single top-level directory by running the following command in the Terminal:\nzipinfo -1 zip_file_name.zip\n# example_dir/\n# example_dir/my_file_1.txt\n# example_dir/subdir/my_file_2.txt\n\n\nSuppose you upload the compressed example_dir directory to AWS S3 at the S3 URI s3://example_bucket/example.zip.\nYour runtime_env dictionary should contain:\nruntime_env = {..., \"working_dir\": \"s3://example_bucket/example.zip\", ...}\n\n\n\nWarning\nCheck for hidden files and metadata directories in zipped dependencies.\nYou can inspect a zip file\u2019s contents by running the zipinfo -1 zip_file_name.zip command in the Terminal.\nSome zipping methods can cause hidden files or metadata directories to appear in the zip file at the top level.\nTo avoid this, use the zip -r command directly on the directory you want to compress from its parent\u2019s directory. For example, if you have a directory structure such as: a/b and you what to compress b, issue the zip -r b command from the directory a.\nIf Ray detects more than a single directory at the top level, it will use the entire zip file instead of the top-level directory, which may lead to unexpected behavior.\n\nCurrently, three types of remote URIs are supported for hosting working_dir and py_modules packages:\n\nHTTPS: HTTPS refers to URLs that start with https.\nThese are particularly useful because remote Git providers (e.g. GitHub, Bitbucket, GitLab, etc.) use https URLs as download links for repository archives.\nThis allows you to host your dependencies on remote Git providers, push updates to them, and specify which dependency versions (i.e. commits) your jobs should use.\nTo use packages via HTTPS URIs, you must have the smart_open library (you can install it using pip install smart_open).\n\nExample:\n\nruntime_env = {\"working_dir\": \"https://github.com/example_username/example_respository/archive/HEAD.zip\"}\n\n\n\n\nS3: S3 refers to URIs starting with s3:// that point to compressed packages stored in AWS S3.\nTo use packages via S3 URIs, you must have the smart_open and boto3 libraries (you can install them using pip install smart_open and pip install boto3).\nRay does not explicitly pass in any credentials to boto3 for authentication.\nboto3 will use your environment variables, shared credentials file, and/or AWS config file to authenticate access.\nSee the AWS boto3 documentation to learn how to configure these.\n\nExample:\n\nruntime_env = {\"working_dir\": \"s3://example_bucket/example_file.zip\"}\n\n\n\n\nGS: GS refers to URIs starting with gs:// that point to compressed packages stored in Google Cloud Storage.\nTo use packages via GS URIs, you must have the smart_open and google-cloud-storage libraries (you can install them using pip install smart_open and pip install google-cloud-storage).\nRay does not explicitly pass in any credentials to the google-cloud-storage\u2019s Client object.\ngoogle-cloud-storage will use your local service account key(s) and environment variables by default.\nFollow the steps on Google Cloud Storage\u2019s Getting started with authentication guide to set up your credentials, which allow Ray to access your remote package.\n\nExample:\n\nruntime_env = {\"working_dir\": \"gs://example_bucket/example_file.zip\"}\n\n\n\n\n\nNote that the smart_open, boto3, and google-cloud-storage packages are not installed by default, and it is not sufficient to specify them in the pip section of your runtime_env.\nThe relevant packages must already be installed on all nodes of the cluster when Ray starts.\n\n\n"
+        },
+        "7376990e-7975-423f-a464-3f6e007ff367": {
+            "source": "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.evaluation.rollout_worker.RolloutWorker.get_node_ip.html#ray-rllib-evaluation-rollout-worker-rolloutworker-get-node-ip",
+            "text": "ray.rllib.evaluation.rollout_worker.RolloutWorker.get_node_ip#\n\n\nRolloutWorker.get_node_ip() \u2192 str[source]#\nReturns the IP address of the node that this worker runs on.\n\n\n\n"
+        },
+        "747af075-f010-4366-8bb2-bfeccff2f15c": {
+            "source": "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.core.learner.learner.Learner.get_optimizer_state.html#ray-rllib-core-learner-learner-learner-get-optimizer-state",
+            "text": "ray.rllib.core.learner.learner.Learner.get_optimizer_state#\n\n\nLearner.get_optimizer_state() \u2192 Mapping[str, Any][source]#\nReturns the state of all optimizers currently registered in this Learner.\n\nReturns\nThe current state of all optimizers currently registered in this Learner.\n\n\n\n\n\n"
+        },
+        "31021a35-0c24-46f0-8a84-213e4a91127d": {
+            "source": "https://docs.ray.io/en/master/train/api/doc/ray.train.ScalingConfig.resources_per_worker.html#ray-train-scalingconfig-resources-per-worker",
+            "text": "ray.train.ScalingConfig.resources_per_worker#\n\n\nScalingConfig.resources_per_worker: Optional[Union[Dict, Domain, Dict[str, List]]] = None#\n\n\n\n"
+        },
+        "cf060f12-3c40-49c1-b7f2-8a8861525306": {
+            "source": "https://docs.ray.io/en/master/data/transforming-data.html#groupby-and-transforming-groups",
+            "text": "Groupby and transforming groups#\nTo transform groups, call groupby() to group rows. Then, call\nmap_groups() to transform the groups.\n\n\n\nNumPy\nfrom typing import Dict\nimport numpy as np\nimport ray\n\nitems = [\n    {\"image\": np.zeros((32, 32, 3)), \"label\": label}\n    for _ in range(10) for label in range(100)\n]\n\ndef normalize_images(group: Dict[str, np.ndarray]) -> Dict[str, np.ndarray]:\n    group[\"image\"] = (group[\"image\"] - group[\"image\"].mean()) / group[\"image\"].std()\n    return group\n\nds = (\n    ray.data.from_items(items)\n    .groupby(\"label\")\n    .map_groups(normalize_images)\n)\n\n\n\n\n\npandas\nimport pandas as pd\nimport ray\n\ndef normalize_features(group: pd.DataFrame) -> pd.DataFrame:\n    target = group.drop(\"target\")\n    group = (group - group.min()) / group.std()\n    group[\"target\"] = target\n    return group\n\nds = (\n    ray.data.read_csv(\"s3://anonymous@air-example-data/iris.csv\")\n    .groupby(\"target\")\n    .map_groups(normalize_features)\n)\n\n\n\n\n\n\n"
+        },
+        "79a04d04-c6bc-49ef-b6b7-f9d36f7246a7": {
+            "source": "https://docs.ray.io/en/master/ray-core/patterns/limit-running-tasks.html#pattern-using-resources-to-limit-the-number-of-concurrently-running-tasks",
+            "text": "Pattern: Using resources to limit the number of concurrently running tasks#\nIn this pattern, we use resources to limit the number of concurrently running tasks.\nBy default, Ray tasks require 1 CPU each and Ray actors require 0 CPU each, so the scheduler limits task concurrency to the available CPUs and actor concurrency to infinite.\nTasks that use more than 1 CPU (e.g., via mutlithreading) may experience slowdown due to interference from concurrent ones, but otherwise are safe to run.\nHowever, tasks or actors that use more than their proportionate share of memory may overload a node and cause issues like OOM.\nIf that is the case, we can reduce the number of concurrently running tasks or actors on each node by increasing the amount of resources requested by them.\nThis works because Ray makes sure that the sum of the resource requirements of all of the concurrently running tasks and actors on a given node does not exceed the node\u2019s total resources.\n\nNote\nFor actor tasks, the number of running actors limits the number of concurrently running actor tasks we can have.\n\n\n"
+        },
+        "76c75dc8-ee48-42ec-ab71-3228d005a810": {
+            "source": "https://docs.ray.io/en/master/train/user-guides/results.html#dataframe-of-all-reported-metrics",
+            "text": "Dataframe of all reported metrics#\nUse Result.metrics_dataframe to retrieve\na pandas DataFrame of all reported metrics.\ndf = result.metrics_dataframe\nprint(\"Minimum loss\", min(df[\"loss\"]))\n\n\n\n\n\n"
+        },
+        "9cb490c9-0a86-4ab0-97da-f2f231c5dfec": {
+            "source": "https://docs.ray.io/en/master/ray-core/patterns/tree-of-actors.html#code-example",
+            "text": "Code example#\nimport ray\n\n\n@ray.remote(num_cpus=1)\nclass Trainer:\n    def __init__(self, hyperparameter, data):\n        self.hyperparameter = hyperparameter\n        self.data = data\n\n    # Train the model on the given training data shard.\n    def fit(self):\n        return self.data * self.hyperparameter\n\n\n@ray.remote(num_cpus=1)\nclass Supervisor:\n    def __init__(self, hyperparameter, data):\n        self.trainers = [Trainer.remote(hyperparameter, d) for d in data]\n\n    def fit(self):\n        # Train with different data shard in parallel.\n        return ray.get([trainer.fit.remote() for trainer in self.trainers])\n\n\ndata = [1, 2, 3]\nsupervisor1 = Supervisor.remote(1, data)\nsupervisor2 = Supervisor.remote(2, data)\n# Train with different hyperparameters in parallel.\nmodel1 = supervisor1.fit.remote()\nmodel2 = supervisor2.fit.remote()\nassert ray.get(model1) == [1, 2, 3]\nassert ray.get(model2) == [2, 4, 6]\n\n\n\n\n\n"
+        },
+        "e389bb8e-0431-4f07-8038-37d9304cd9bc": {
+            "source": "https://docs.ray.io/en/master/tune/tutorials/tune-lifecycle.html#searchalg",
+            "text": "SearchAlg#\n[source code]\nThe SearchAlgorithm is a user-provided object\nthat is used for querying new hyperparameter configurations to evaluate.\nSearchAlgorithms will be notified every time a trial finishes\nexecuting one training step (of train()), every time a trial\nerrors, and every time a trial completes.\n\n\n"
+        },
+        "755eefd0-56e4-499b-8ea0-74eb554f90fe": {
+            "source": "https://docs.ray.io/en/master/data/api/execution_options.html#executionoptions-api",
+            "text": "ExecutionOptions API#\n\n"
+        },
+        "07c23ad7-9534-4f8d-a8d3-81e478bf18d8": {
+            "source": "https://docs.ray.io/en/master/installation.html#windows-support",
+            "text": "Windows Support#\nWindows support is in Beta. Ray supports running on Windows with the following caveats (only the first is\nRay-specific, the rest are true anywhere Windows is used):\n\nMulti-node Ray clusters are untested.\nFilenames are tricky on Windows and there still may be a few places where Ray\nassumes UNIX filenames rather than Windows ones. This can be true in downstream\npackages as well.\nPerformance on Windows is known to be slower since opening files on Windows\nis considerably slower than on other operating systems. This can affect logging.\nWindows does not have a copy-on-write forking model, so spinning up new\nprocesses can require more memory.\n\nSubmit any issues you encounter to\nGitHub.\n\n\n"
+        },
+        "c2b9c086-930d-4ee4-a19b-7fd1a39101c4": {
+            "source": "https://docs.ray.io/en/master/ray-core/scheduling/placement-group.html#advanced-named-placement-group",
+            "text": "[Advanced] Named Placement Group#\nA placement group can be given a globally unique name.\nThis allows you to retrieve the placement group from any job in the Ray cluster.\nThis can be useful if you cannot directly pass the placement group handle to\nthe actor or task that needs it, or if you are trying to\naccess a placement group launched by another driver.\nNote that the placement group is still destroyed if its lifetime isn\u2019t detached.\n\n\n\nPython\n# first_driver.py\n# Create a placement group with a global name.\npg = placement_group([{\"CPU\": 1}], name=\"global_name\")\nray.get(pg.ready())\n\n# second_driver.py\n# Retrieve a placement group with a global name.\npg = ray.util.get_placement_group(\"global_name\")\n\n\n\n\n\nJava\n// Create a placement group with a unique name.\nMap<String, Double> bundle = ImmutableMap.of(\"CPU\", 1.0);\nList<Map<String, Double>> bundles = ImmutableList.of(bundle);\n\nPlacementGroupCreationOptions options =\n  new PlacementGroupCreationOptions.Builder()\n    .setBundles(bundles)\n    .setStrategy(PlacementStrategy.STRICT_SPREAD)\n    .setName(\"global_name\")\n    .build();\n\nPlacementGroup pg = PlacementGroups.createPlacementGroup(options);\npg.wait(60);\n\n...\n\n// Retrieve the placement group later somewhere.\nPlacementGroup group = PlacementGroups.getPlacementGroup(\"global_name\");\nAssert.assertNotNull(group);\n\n\n\n\n\nC++\n// Create a placement group with a globally unique name.\nstd::vector<std::unordered_map<std::string, double>> bundles{{{\"CPU\", 1.0}}};\n\nray::PlacementGroupCreationOptions options{\n    true/*global*/, \"global_name\", bundles, ray::PlacementStrategy::STRICT_SPREAD};\n\nray::PlacementGroup pg = ray::CreatePlacementGroup(options);\npg.Wait(60);\n\n...\n\n// Retrieve the placement group later somewhere.\nray::PlacementGroup group = ray::GetGlobalPlacementGroup(\"global_name\");\nassert(!group.Empty());\n\n\nWe also support non-global named placement group in C++, which means that the placement group name is only valid within the job and cannot be accessed from another job.\n// Create a placement group with a job-scope-unique name.\nstd::vector<std::unordered_map<std::string, double>> bundles{{{\"CPU\", 1.0}}};\n\nray::PlacementGroupCreationOptions options{\n    false/*non-global*/, \"non_global_name\", bundles, ray::PlacementStrategy::STRICT_SPREAD};\n\nray::PlacementGroup pg = ray::CreatePlacementGroup(options);\npg.Wait(60);\n\n...\n\n// Retrieve the placement group later somewhere in the same job.\nray::PlacementGroup group = ray::GetPlacementGroup(\"non_global_name\");\nassert(!group.Empty());\n\n\n\n\n\n\n"
+        },
+        "5b6bec82-acf7-436c-865b-da464539171f": {
+            "source": "https://docs.ray.io/en/master/serve/advanced-guides/performance.html#performance-and-known-benchmarks",
+            "text": "Performance and known benchmarks#\nWe are continuously benchmarking Ray Serve. The metrics we care about are latency, throughput, and scalability. We can confidently say:\n\nRay Serve\u2019s latency overhead is single digit milliseconds, around 1-2 milliseconds on average.\nFor throughput, Serve achieves about 3-4k queries per second on a single machine (8 cores) using 1 HTTP proxy actor and 8 replicas performing no-op requests.\nIt is horizontally scalable so you can add more machines to increase the overall throughput. Ray Serve is built on top of Ray,\nso its scalability is bounded by Ray\u2019s scalability. Please see Ray\u2019s scalability envelope\nto learn more about the maximum number of nodes and other limitations.\n\nWe run long-running benchmarks nightly:\n\n\n\n\n\n\n\n\nBenchmark\nDescription\nCluster Details\nPerformance Numbers\n\n\n\nSingle Deployment\nRuns 10 minute wrk trial on a single no-op deployment with 1000 replicas.\nHead node: AWS EC2 m5.8xlarge. 32 worker nodes: AWS EC2 m5.8xlarge.\n\nper_thread_latency_avg_ms = 22.41\nper_thread_latency_max_ms = 1400.0\nper_thread_avg_tps = 55.75\nper_thread_max_tps = 121.0\nper_node_avg_tps = 553.17\nper_node_avg_transfer_per_sec_KB = 83.19\ncluster_total_thoughput = 10954456\ncluster_total_transfer_KB = 1647441.9199999997\ncluster_total_timeout_requests = 0\ncluster_max_P50_latency_ms = 8.84\ncluster_max_P75_latency_ms = 35.31\ncluster_max_P90_latency_ms = 49.69\ncluster_max_P99_latency_ms = 56.5\n\n\n\nMultiple Deployments\nRuns 10 minute wrk trial on 10 deployments with 100 replicas each. Each deployment recursively sends queries to up to 5 other deployments.\nHead node: AWS EC2 m5.8xlarge. 32 worker nodes: AWS EC2 m5.8xlarge.\n\nper_thread_latency_avg_ms = 0.0\nper_thread_latency_max_ms = 0.0\nper_thread_avg_tps = 0.0\nper_thread_max_tps = 0.0\nper_node_avg_tps = 0.35\nper_node_avg_transfer_per_sec_KB = 0.05\ncluster_total_thoughput = 6964\ncluster_total_transfer_KB = 1047.28\ncluster_total_timeout_requests = 6964.0\ncluster_max_P50_latency_ms = 0.0\ncluster_max_P75_latency_ms = 0.0\ncluster_max_P90_latency_ms = 0.0\ncluster_max_P99_latency_ms = 0.0\n\n\n\nDeployment Graph: Ensemble\nRuns 10 node ensemble, constructed with a call graph, that performs basic arithmetic at each node. Ensemble pattern routes the input to 10 different nodes, and their outputs are combined to produce the final output. Simulates 4 clients making 20 requests each.\nHead node: AWS EC2 m5.8xlarge. 0 Worker nodes.\n\nthroughput_mean_tps = 8.75\nthroughput_std_tps = 0.43\nlatency_mean_ms = 126.15\nlatency_std_ms = 18.35\n\n\n\n\n\n\nNote\nThe performance numbers above come from a recent run of the nightly benchmarks.\n\n- See https://github.com/ray-project/ray/pull/27711 for more context on the benchmarks. \nCheck out our benchmark workloads\u2019 source code directly to get a better sense of what they test. You can see which cluster templates each benchmark uses here (under the cluster_compute key), and you can see what type of nodes each template spins up here.\nYou can check out our microbenchmark instructions\nto benchmark Ray Serve on your hardware.\n\n\n"
+        },
+        "ec401369-73f9-438e-993e-d2d2912bd5f5": {
+            "source": "https://docs.ray.io/en/master/ray-core/examples/batch_prediction.html#batch-prediction-with-ray-core",
+            "text": "Batch Prediction with Ray Core#\n\nNote\nFor a higher level API for batch inference on large datasets, see batch inference with Ray Data. This example is for users who want more control over data sharding and execution.\n\nThe batch prediction is the process of using a trained model to generate predictions for a collection of observations. It has the following elements:\n\nInput dataset: this is a collection of observations to generate predictions for. The data is usually stored in an external storage system like S3, HDFS or database, and can be large.\nML model: this is a trained ML model which is usually also stored in an external storage system.\nPredictions: these are the outputs when applying the ML model on observations. The predictions are usually written back to the storage system.\n\nWith Ray, you can build scalable batch prediction for large datasets at high prediction throughput. Ray Data provides a higher-level API for offline batch inference, with built-in optimizations. However, for more control, you can use the lower-level Ray Core APIs. This example demonstrates batch inference with Ray Core by splitting the dataset into disjoint shards and executing them in parallel, with either Ray Tasks or Ray Actors across a Ray Cluster.\n\n"
+        },
+        "a73bf79f-19b0-41bf-9822-ae54a534dca1": {
+            "source": "https://docs.ray.io/en/master/tune/api/doc/ray.tune.search.sigopt.SigOptSearch.on_trial_complete.html#ray-tune-search-sigopt-sigoptsearch-on-trial-complete",
+            "text": "ray.tune.search.sigopt.SigOptSearch.on_trial_complete#\n\n\nSigOptSearch.on_trial_complete(trial_id: str, result: Optional[Dict] = None, error: bool = False)[source]#\nNotification for the completion of trial.\nIf a trial fails, it will be reported as a failed Observation, telling\nthe optimizer that the Suggestion led to a metric failure, which\nupdates the feasible region and improves parameter recommendation.\nCreates SigOpt Observation object for trial.\n\n\n\n"
+        },
+        "a4c8b9dd-3e01-45cc-a620-c9e48dde0cd2": {
+            "source": "https://docs.ray.io/en/master/data/api/doc/ray.data.Dataset.default_batch_format.html#ray-data-dataset-default-batch-format",
+            "text": "ray.data.Dataset.default_batch_format#\n\n\nDataset.default_batch_format() \u2192 Type[source]#\n\nWarning\nDEPRECATED: This API is deprecated and may be removed in future Ray releases.\nThe batch format is no longer exposed as a public API.\n\n\n\n\n"
+        },
+        "4c56369f-94d7-4a65-9abd-8247096427c1": {
+            "source": "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.utils.replay_buffers.replay_buffer.ReplayBuffer.__init__.html#ray-rllib-utils-replay-buffers-replay-buffer-replaybuffer-init",
+            "text": "ray.rllib.utils.replay_buffers.replay_buffer.ReplayBuffer.__init__#\n\n\nReplayBuffer.__init__(capacity: int = 10000, storage_unit: Union[str, ray.rllib.utils.replay_buffers.replay_buffer.StorageUnit] = 'timesteps', **kwargs)[source]#\nInitializes a (FIFO) ReplayBuffer instance.\n\nParameters\n\ncapacity \u2013 Max number of timesteps to store in this FIFO\nbuffer. After reaching this number, older samples will be\ndropped to make space for new ones.\nstorage_unit \u2013 If not a StorageUnit, either \u2018timesteps\u2019, \u2018sequences\u2019 or\n\u2018episodes\u2019. Specifies how experiences are stored.\n**kwargs \u2013 Forward compatibility kwargs.\n\n\n\n\n\n\n"
+        },
+        "7a1fb4ae-212f-4926-8351-edbd2d868805": {
+            "source": "https://docs.ray.io/en/master/tune/faq.html#how-can-i-run-multiple-ray-tune-jobs-on-the-same-cluster-at-the-same-time-multi-tenancy",
+            "text": "How can I run multiple Ray Tune jobs on the same cluster at the same time (multi-tenancy)?#\nRunning multiple Ray Tune runs on the same cluster at the same\ntime is not officially supported. We do not test this workflow and we recommend\nusing a separate cluster for each tuning job.\nThe reasons for this are:\n\nWhen multiple Ray Tune jobs run at the same time, they compete for resources.\nOne job could run all its trials at the same time, while the other job waits\nfor a long time until it gets resources to run the first trial.\nIf it is easy to start a new Ray cluster on your infrastructure, there is often\nno cost benefit to running one large cluster instead of multiple smaller\nclusters. For instance, running one cluster of 32 instances incurs almost the same\ncost as running 4 clusters with 8 instances each.\nConcurrent jobs are harder to debug. If a trial of job A fills the disk,\ntrials from job B on the same node are impacted. In practice, it\u2019s hard\nto reason about these conditions from the logs if something goes wrong.\n\nPreviously, some internal implementations in Ray Tune assumed that you only have one job\nrunning at a time. A symptom was when trials from job A used parameters specified in job B,\nleading to unexpected results.\nPlease refer to\n[this github issue](https://github.com/ray-project/ray/issues/30091#issuecomment-1431676976)\nfor more context and a workaround if you run into this issue.\n\n\n"
+        },
+        "69052f3d-eb14-4b9a-8598-9561b309a313": {
+            "source": "https://docs.ray.io/en/master/cluster/running-applications/job-submission/ray-client.html#how-do-you-use-the-ray-client",
+            "text": "How do you use the Ray Client?#\n\n"
+        },
+        "e125fa56-9100-44d8-81e8-00281ef6fad4": {
+            "source": "https://docs.ray.io/en/master/data/api/doc/ray.data.Datasource.do_write.html#ray-data-datasource-do-write",
+            "text": "ray.data.Datasource.do_write#\n\n\nDatasource.do_write(blocks: List[ray.types.ObjectRef[Union[pyarrow.Table, pandas.DataFrame]]], metadata: List[ray.data.block.BlockMetadata], ray_remote_args: Dict[str, Any], **write_args) \u2192 List[ray.types.ObjectRef[Any]][source]#\nLaunch Ray tasks for writing blocks out to the datasource.\n\nParameters\n\nblocks \u2013 List of data block references. It is recommended that one\nwrite task be generated per block.\nmetadata \u2013 List of block metadata.\nray_remote_args \u2013 Kwargs passed to ray.remote in the write tasks.\nwrite_args \u2013 Additional kwargs to pass to the datasource impl.\n\n\nReturns\nA list of the output of the write tasks.\n\n\n\nWarning\nDEPRECATED: This API is deprecated and may be removed in future Ray releases.\ndo_write() is deprecated in Ray 2.4. Use write() instead\n\n\n\n\n"
+        },
+        "25418a72-5218-4d1a-9e04-244a3a0c7567": {
+            "source": "https://docs.ray.io/en/master/_modules/ray/rllib/utils/annotations.html",
+            "text": "\n\nSource code for ray.rllib.utils.annotations\nfrom ray.rllib.utils.deprecation import Deprecated\nfrom ray.util.annotations import _mark_annotated\n\n\ndef override(cls):\n    \"\"\"Decorator for documenting method overrides.\n\n    Args:\n        cls: The superclass that provides the overridden method. If this\n            cls does not actually have the method, an error is raised.\n\n    Examples:\n        >>> from ray.rllib.policy import Policy\n        >>> class TorchPolicy(Policy): # doctest: +SKIP\n        ...     ...\n        ...     # Indicates that `TorchPolicy.loss()` overrides the parent\n        ...     # Policy class' own `loss method. Leads to an error if Policy\n        ...     # does not have a `loss` method.\n        ...     @override(Policy) # doctest: +SKIP\n        ...     def loss(self, model, action_dist, train_batch): # doctest: +SKIP\n        ...         ... # doctest: +SKIP\n    \"\"\"\n\n    def check_override(method):\n        if method.__name__ not in dir(cls):\n            raise NameError(\"{} does not override any method of {}\".format(method, cls))\n        return method\n\n    return check_override\n\n\n[docs]def PublicAPI(obj):\n    \"\"\"Decorator for documenting public APIs.\n\n    Public APIs are classes and methods exposed to end users of RLlib. You\n    can expect these APIs to remain stable across RLlib releases.\n\n    Subclasses that inherit from a ``@PublicAPI`` base class can be\n    assumed part of the RLlib public API as well (e.g., all Algorithm classes\n    are in public API because Algorithm is ``@PublicAPI``).\n\n    In addition, you can assume all algo configurations are part of their\n    public API as well.\n\n    Examples:\n        >>> # Indicates that the `Algorithm` class is exposed to end users\n        >>> # of RLlib and will remain stable across RLlib releases.\n        >>> from ray import tune\n        >>> @PublicAPI # doctest: +SKIP\n        >>> class Algorithm(tune.Trainable): # doctest: +SKIP\n        ...     ... # doctest: +SKIP\n    \"\"\"\n\n    _mark_annotated(obj)\n    return obj\n\n\n[docs]def DeveloperAPI(obj):\n    \"\"\"Decorator for documenting developer APIs.\n\n    Developer APIs are classes and methods explicitly exposed to developers\n    for the purposes of building custom algorithms or advanced training\n    strategies on top of RLlib internals. You can generally expect these APIs\n    to be stable sans minor changes (but less stable than public APIs).\n\n    Subclasses that inherit from a ``@DeveloperAPI`` base class can be\n    assumed part of the RLlib developer API as well.\n\n    Examples:\n        >>> # Indicates that the `TorchPolicy` class is exposed to end users\n        >>> # of RLlib and will remain (relatively) stable across RLlib\n        >>> # releases.\n        >>> from ray.rllib.policy import Policy\n        >>> @DeveloperAPI # doctest: +SKIP\n        ... class TorchPolicy(Policy): # doctest: +SKIP\n        ...     ... # doctest: +SKIP\n    \"\"\"\n\n    _mark_annotated(obj)\n    return obj\n\n\n[docs]def ExperimentalAPI(obj):\n    \"\"\"Decorator for documenting experimental APIs.\n\n    Experimental APIs are classes and methods that are in development and may\n    change at any time in their development process. You should not expect\n    these APIs to be stable until their tag is changed to `DeveloperAPI` or\n    `PublicAPI`.\n\n    Subclasses that inherit from a ``@ExperimentalAPI`` base class can be\n    assumed experimental as well.\n\n    Examples:\n        >>> from ray.rllib.policy import Policy\n        >>> class TorchPolicy(Policy): # doctest: +SKIP\n        ...     ... # doctest: +SKIP\n        ...     # Indicates that the `TorchPolicy.loss` method is a new and\n        ...     # experimental API and may change frequently in future\n        ...     # releases.\n        ...     @ExperimentalAPI # doctest: +SKIP\n        ...     def loss(self, model, action_dist, train_batch): # doctest: +SKIP\n        ...         ... # doctest: +SKIP\n    \"\"\"\n\n    _mark_annotated(obj)\n    return obj\n\n\ndef OverrideToImplementCustomLogic(obj):\n    \"\"\"Users should override this in their sub-classes to implement custom logic.\n\n    Used in Algorithm and Policy to tag methods that need overriding, e.g.\n    `Policy.loss()`.\n\n    Examples:\n        >>> from ray.rllib.policy.torch_policy import TorchPolicy\n        >>> @overrides(TorchPolicy) # doctest: +SKIP\n        ... @OverrideToImplementCustomLogic # doctest: +SKIP\n        ... def loss(self, ...): # doctest: +SKIP\n        ...     # implement custom loss function here ...\n        ...     # ... w/o calling the corresponding `super().loss()` method.\n        ...     ... # doctest: +SKIP\n    \"\"\"\n    obj.__is_overriden__ = False\n    return obj\n\n\ndef OverrideToImplementCustomLogic_CallToSuperRecommended(obj):\n    \"\"\"Users should override this in their sub-classes to implement custom logic.\n\n    Thereby, it is recommended (but not required) to call the super-class'\n    corresponding method.\n\n    Used in Algorithm and Policy to tag methods that need overriding, but the\n    super class' method should still be called, e.g.\n    `Algorithm.setup()`.\n\n    Examples:\n        >>> from ray import tune\n        >>> @overrides(tune.Trainable) # doctest: +SKIP\n        ... @OverrideToImplementCustomLogic_CallToSuperRecommended # doctest: +SKIP\n        ... def setup(self, config): # doctest: +SKIP\n        ...     # implement custom setup logic here ...\n        ...     super().setup(config) # doctest: +SKIP\n        ...     # ... or here (after having called super()'s setup method.\n    \"\"\"\n    obj.__is_overriden__ = False\n    return obj\n\n\ndef is_overridden(obj):\n    \"\"\"Check whether a function has been overridden.\n\n    Note, this only works for API calls decorated with OverrideToImplementCustomLogic\n    or OverrideToImplementCustomLogic_CallToSuperRecommended.\n    \"\"\"\n    return getattr(obj, \"__is_overriden__\", True)\n\n\n# Backward compatibility.\nDeprecated = Deprecated\n\n\n"
+        },
+        "15abb85c-a055-43ca-bae9-2c83a58aedad": {
+            "source": "https://docs.ray.io/en/master/ray-more-libs/actors.html#calling-the-actor",
+            "text": "Calling the actor#\nWe can interact with the actor by calling its methods with the remote\noperator. We can then call get on the object ref to retrieve the actual\nvalue.\n\n\n\nPython\n# Call the actor.\nobj_ref = counter.increment.remote()\nprint(ray.get(obj_ref))\n\n\n1\n\n\n\n\n\nJava\n// Call the actor.\nObjectRef<Integer> objectRef = counter.task(&Counter::increment).remote();\nAssert.assertTrue(objectRef.get() == 1);\n\n\n\n\n\nC++\n// Call the actor.\nauto object_ref = counter.Task(&Counter::increment).Remote();\nassert(*object_ref.Get() == 1);\n\n\n\n\nMethods called on different actors can execute in parallel, and methods called on the same actor are executed serially in the order that they are called. Methods on the same actor will share state with one another, as shown below.\n\n\n\nPython\n# Create ten Counter actors.\ncounters = [Counter.remote() for _ in range(10)]\n\n# Increment each Counter once and get the results. These tasks all happen in\n# parallel.\nresults = ray.get([c.increment.remote() for c in counters])\nprint(results)\n\n# Increment the first Counter five times. These tasks are executed serially\n# and share state.\nresults = ray.get([counters[0].increment.remote() for _ in range(5)])\nprint(results)\n\n\n[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]\n[2, 3, 4, 5, 6]\n\n\n\n\n\nJava\n// Create ten Counter actors.\nList<ActorHandle<Counter>> counters = new ArrayList<>();\nfor (int i = 0; i < 10; i++) {\n    counters.add(Ray.actor(Counter::new).remote());\n}\n\n// Increment each Counter once and get the results. These tasks all happen in\n// parallel.\nList<ObjectRef<Integer>> objectRefs = new ArrayList<>();\nfor (ActorHandle<Counter> counterActor : counters) {\n    objectRefs.add(counterActor.task(Counter::increment).remote());\n}\n// prints [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]\nSystem.out.println(Ray.get(objectRefs));\n\n// Increment the first Counter five times. These tasks are executed serially\n// and share state.\nobjectRefs = new ArrayList<>();\nfor (int i = 0; i < 5; i++) {\n    objectRefs.add(counters.get(0).task(Counter::increment).remote());\n}\n// prints [2, 3, 4, 5, 6]\nSystem.out.println(Ray.get(objectRefs));\n\n\n\n\n\nC++\n// Create ten Counter actors.\nstd::vector<ray::ActorHandle<Counter>> counters;\nfor (int i = 0; i < 10; i++) {\n    counters.emplace_back(ray::Actor(CreateCounter).Remote());\n}\n\n// Increment each Counter once and get the results. These tasks all happen in\n// parallel.\nstd::vector<ray::ObjectRef<int>> object_refs;\nfor (ray::ActorHandle<Counter> counter_actor : counters) {\n    object_refs.emplace_back(counter_actor.Task(&Counter::Increment).Remote());\n}\n// prints 1, 1, 1, 1, 1, 1, 1, 1, 1, 1\nauto results = ray::Get(object_refs);\nfor (const auto &result : results) {\n    std::cout << *result;\n}\n\n// Increment the first Counter five times. These tasks are executed serially\n// and share state.\nobject_refs.clear();\nfor (int i = 0; i < 5; i++) {\n    object_refs.emplace_back(counters[0].Task(&Counter::Increment).Remote());\n}\n// prints 2, 3, 4, 5, 6\nresults = ray::Get(object_refs);\nfor (const auto &result : results) {\n    std::cout << *result;\n}\n\n\n\n\n\n\n"
+        },
+        "1228c439-80fd-43cf-9b8d-51fcc19ffe9f": {
+            "source": "https://docs.ray.io/en/master/rllib/package_ref/policy.html#making-models",
+            "text": "Making models#\n\n"
+        },
+        "9712800f-99f2-4b5c-8b77-961e41ffc97e": {
+            "source": "https://docs.ray.io/en/master/data/api/doc/ray.data.preprocessors.RobustScaler.preferred_batch_format.html#ray-data-preprocessors-robustscaler-preferred-batch-format",
+            "text": "ray.data.preprocessors.RobustScaler.preferred_batch_format#\n\n\nclassmethod RobustScaler.preferred_batch_format() \u2192 ray.air.util.data_batch_conversion.BatchFormat#\nBatch format hint for upstream producers to try yielding best block format.\nThe preferred batch format to use if both _transform_pandas and\n_transform_numpy are implemented. Defaults to Pandas.\nCan be overriden by Preprocessor classes depending on which transform\npath is the most optimal.\nDeveloperAPI: This API may change across minor Ray releases.\n\n\n\n"
+        },
+        "2c77f255-0bca-4721-b0cf-b9ddbe08e45e": {
+            "source": "https://docs.ray.io/en/master/data/preprocessors.html#implementing-custom-preprocessors",
+            "text": "Implementing custom preprocessors#\nIf you want to implement a custom preprocessor that needs to be fit, extend the\nPreprocessor base class.\nfrom typing import Dict\nimport ray\nfrom pandas import DataFrame\nfrom ray.data.preprocessor import Preprocessor\nfrom ray.data import Dataset\nfrom ray.data.aggregate import Max\n\n\nclass CustomPreprocessor(Preprocessor):\n    def _fit(self, dataset: Dataset) -> Preprocessor:\n        self.stats_ = dataset.aggregate(Max(\"id\"))\n\n    def _transform_pandas(self, df: DataFrame) -> DataFrame:\n        return df * self.stats_[\"max(id)\"]\n\n\n# Generate a simple dataset.\ndataset = ray.data.range(4)\nprint(dataset.take())\n# [{'id': 0}, {'id': 1}, {'id': 2}, {'id': 3}]\n\n# Create a stateful preprocessor that finds the max id and scales each id by it.\npreprocessor = CustomPreprocessor()\ndataset_transformed = preprocessor.fit_transform(dataset)\nprint(dataset_transformed.take())\n# [{'id': 0}, {'id': 3}, {'id': 6}, {'id': 9}]\n\n\nIf your preprocessor doesn\u2019t need to be fit, use map_batches() to directly transform your dataset. For more details, see Transforming Data.\n\n\n\n\n"
+        },
+        "9e2eb350-6125-4703-89f7-bc1ad3969cee": {
+            "source": "https://docs.ray.io/en/master/tune/tutorials/tune-lifecycle.html#how-does-tune-work",
+            "text": "How does Tune work?#\nThis page provides an overview of Tune\u2019s inner workings.\nWe describe in detail what happens when you call Tuner.fit(), what the lifecycle of a Tune trial looks like\nand what the architectural components of Tune are.\n\nTip\nBefore you continue, be sure to have read the Tune Key Concepts page.\n\n\n"
+        },
+        "4d6eb4b6-71fe-4ec4-a8a2-e02764ae5743": {
+            "source": "https://docs.ray.io/en/master/data/working-with-text.html#saving-text",
+            "text": "Saving text#\nTo save text, call a method like write_parquet(). Ray Data can\nsave text in many formats.\nTo view the full list of supported file formats, see the\nInput/Output reference.\nimport ray\n\nds = ray.data.read_text(\"s3://anonymous@ray-example-data/this.txt\")\n\nds.write_parquet(\"local:///tmp/results\")\n\n\nFor more information on saving data, see Saving data.\n\n\n\n"
+        },
+        "5c758fbb-d6fb-4af5-95b3-667d650aca29": {
+            "source": "https://docs.ray.io/en/master/tune/api/doc/ray.tune.Trainable.logdir.html#ray-tune-trainable-logdir",
+            "text": "ray.tune.Trainable.logdir#\n\n\nproperty Trainable.logdir#\nDirectory of the results and checkpoints for this Trainable.\nTune will automatically sync this folder with the driver if execution\nis distributed.\nNote that the current working directory will also be changed to this.\n\n\n\n"
+        },
+        "bc020eac-30e0-45d9-9b8a-cb99977bafcc": {
+            "source": "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.policy.torch_policy_v2.TorchPolicyV2.make_model.html#ray-rllib-policy-torch-policy-v2-torchpolicyv2-make-model",
+            "text": "ray.rllib.policy.torch_policy_v2.TorchPolicyV2.make_model#\n\n\nTorchPolicyV2.make_model() \u2192 ray.rllib.models.modelv2.ModelV2[source]#\nCreate model.\nNote: only one of make_model or make_model_and_action_dist\ncan be overridden.\n\nReturns\nModelV2 model.\n\n\n\n\n\n"
+        },
+        "6ee8b0e2-971e-4b67-b29d-c024b8248a7a": {
+            "source": "https://docs.ray.io/en/master/tune/api/doc/ray.tune.with_parameters.html#ray-tune-with-parameters",
+            "text": "ray.tune.with_parameters#\n\n\nray.tune.with_parameters(trainable: Union[Type[Trainable], Callable], **kwargs)[source]#\nWrapper for trainables to pass arbitrary large data objects.\nThis wrapper function will store all passed parameters in the Ray\nobject store and retrieve them when calling the function. It can thus\nbe used to pass arbitrary data, even datasets, to Tune trainables.\nThis can also be used as an alternative to functools.partial to pass\ndefault arguments to trainables.\nWhen used with the function API, the trainable function is called with\nthe passed parameters as keyword arguments. When used with the class API,\nthe Trainable.setup() method is called with the respective kwargs.\nIf the data already exists in the object store (are instances of\nObjectRef), using tune.with_parameters() is not necessary. You can\ninstead pass the object refs to the training function via the config\nor use Python partials.\n\nParameters\n\ntrainable \u2013 Trainable to wrap.\n**kwargs \u2013 parameters to store in object store.\n\n\n\nFunction API example:\nfrom ray import train, tune\n\ndef train(config, data=None):\n    for sample in data:\n        loss = update_model(sample)\n        train.report(loss=loss)\n\ndata = HugeDataset(download=True)\n\ntuner = Tuner(\n    tune.with_parameters(train, data=data),\n    # ...\n)\ntuner.fit()\n\n\nClass API example:\nfrom ray import tune\n\nclass MyTrainable(tune.Trainable):\n    def setup(self, config, data=None):\n        self.data = data\n        self.iter = iter(self.data)\n        self.next_sample = next(self.iter)\n\n    def step(self):\n        loss = update_model(self.next_sample)\n        try:\n            self.next_sample = next(self.iter)\n        except StopIteration:\n            return {\"loss\": loss, done: True}\n        return {\"loss\": loss}\n\ndata = HugeDataset(download=True)\n\ntuner = Tuner(\n    tune.with_parameters(MyTrainable, data=data),\n    # ...\n)\n\n\nPublicAPI (beta): This API is in beta and may change before becoming stable.\n\n\n\n"
+        },
+        "b3e5378b-94f9-42e5-a2f1-126e19400890": {
+            "source": "https://docs.ray.io/en/master/train/distributed-tensorflow-keras.html#running-your-training-function",
+            "text": "Running your training function#\nWith a distributed training function and a Ray Train Trainer, you are now\nready to start training!\ntrainer.fit()\n\n\n\n\n"
+        },
+        "fc2a4175-beda-45fa-be07-8421e42f711a": {
+            "source": "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.policy.sample_batch.SampleBatch.clear.html#ray-rllib-policy-sample-batch-samplebatch-clear",
+            "text": "ray.rllib.policy.sample_batch.SampleBatch.clear#\n\n\nSampleBatch.clear() \u2192 None.\u00a0 Remove all items from D.#\n\n\n\n"
+        },
+        "71f2d3c3-7ced-4cce-8530-ddc16800e3c7": {
+            "source": "https://docs.ray.io/en/master/ray-contribute/getting-involved.html#for-contributors-who-are-in-the-ray-project-organization",
+            "text": "For contributors who are in the ray-project organization:#\n\nWhen you first create a PR, add an reviewer to the assignee section.\nAssignees will review your PR and add the @author-action-required label if further actions are required.\nAddress their comments and remove the @author-action-required label from the PR.\nRepeat this process until assignees approve your PR.\nOnce the PR is approved, the author is in charge of ensuring the PR passes the build. Add the test-ok label if the build succeeds.\nCommitters will merge the PR once the build is passing.\n\n\n\n"
+        },
+        "22dfcc70-7f29-47bd-bfbb-7f27c057a86d": {
+            "source": "https://docs.ray.io/en/master/tune/api/doc/ray.tune.search.flaml.CFO.html#ray-tune-search-flaml-cfo",
+            "text": "ray.tune.search.flaml.CFO#\n\n\nray.tune.search.flaml.CFO#\nalias of ray.tune.search.flaml.flaml_search._DummyErrorRaiser\n\n\n\n"
+        },
+        "7a53ff93-e73b-4a6d-8384-dc5d57df0580": {
+            "source": "https://docs.ray.io/en/master/ray-core/scheduling/index.html#spread",
+            "text": "\u201cSPREAD\u201d#\n\"SPREAD\" strategy will try to spread the tasks or actors among available nodes.\n@ray.remote(scheduling_strategy=\"SPREAD\")\ndef spread_func():\n    return 2\n\n\n@ray.remote(num_cpus=1)\nclass SpreadActor:\n    pass\n\n\n# Spread tasks across the cluster.\n[spread_func.remote() for _ in range(10)]\n# Spread actors across the cluster.\nactors = [SpreadActor.options(scheduling_strategy=\"SPREAD\").remote() for _ in range(10)]\n\n\n\n\n"
+        },
+        "672f57bb-c83e-4ea8-a6b0-6470b79dac78": {
+            "source": "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.utils.replay_buffers.reservoir_replay_buffer.ReservoirReplayBuffer.stats.html#ray-rllib-utils-replay-buffers-reservoir-replay-buffer-reservoirreplaybuffer-stats",
+            "text": "ray.rllib.utils.replay_buffers.reservoir_replay_buffer.ReservoirReplayBuffer.stats#\n\n\nReservoirReplayBuffer.stats(debug: bool = False) \u2192 dict[source]#\nReturns the stats of this buffer.\n\nParameters\ndebug \u2013 If True, adds sample eviction statistics to the returned\nstats dict.\n\nReturns\nA dictionary of stats about this buffer.\n\n\n\n\n\n"
+        },
+        "f937fb51-8cc7-4cfa-ab0d-8462bdd4c3f2": {
+            "source": "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.policy.Policy.get_weights.html#ray-rllib-policy-policy-get-weights",
+            "text": "ray.rllib.policy.Policy.get_weights#\n\n\nPolicy.get_weights() \u2192 dict[source]#\nReturns model weights.\nNote: The return value of this method will reside under the \u201cweights\u201d\nkey in the return value of Policy.get_state(). Model weights are only\none part of a Policy\u2019s state. Other state information contains:\noptimizer variables, exploration state, and global state vars such as\nthe sampling timestep.\n\nReturns\nSerializable copy or view of model weights.\n\n\n\n\n\n"
+        },
+        "c7d78ed1-3971-44d1-8c01-1c509b2cdd33": {
+            "source": "https://docs.ray.io/en/master/ray-more-libs/dask-on-ray.html#callbacks",
+            "text": "Callbacks#\nDask\u2019s custom callback abstraction\nis extended with Ray-specific callbacks, allowing the user to hook into the\nRay task submission and execution lifecycles.\nWith these hooks, implementing Dask-level scheduler and task introspection,\nsuch as progress reporting, diagnostics, caching, etc., is simple.\nHere\u2019s an example that measures and logs the execution time of each task using\nthe ray_pretask and ray_posttask hooks:\nfrom ray.util.dask import RayDaskCallback, ray_dask_get\nfrom timeit import default_timer as timer\n\n\nclass MyTimerCallback(RayDaskCallback):\n    def _ray_pretask(self, key, object_refs):\n        # Executed at the start of the Ray task.\n        start_time = timer()\n        return start_time\n\n    def _ray_posttask(self, key, result, pre_state):\n        # Executed at the end of the Ray task.\n        execution_time = timer() - pre_state\n        print(f\"Execution time for task {key}: {execution_time}s\")\n\n\nwith MyTimerCallback():\n    # Any .compute() calls within this context will get MyTimerCallback()\n    # as a Dask-Ray callback.\n    z.compute(scheduler=ray_dask_get)\n\n\nThe following Ray-specific callbacks are provided:\n\n\nray_presubmit(task, key, deps): Run before submitting a Ray\ntask. If this callback returns a non-None value, a Ray task will _not_\nbe created and this value will be used as the would-be task\u2019s result\nvalue.\nray_postsubmit(task, key, deps, object_ref): Run after submitting\na Ray task.\nray_pretask(key, object_refs): Run before executing a Dask task\nwithin a Ray task. This executes after the task has been submitted,\nwithin a Ray worker. The return value of this task will be passed to the\nray_posttask callback, if provided.\nray_posttask(key, result, pre_state): Run after executing a Dask\ntask within a Ray task. This executes within a Ray worker. This callback\nreceives the return value of the ray_pretask callback, if provided.\nray_postsubmit_all(object_refs, dsk): Run after all Ray tasks\nhave been submitted.\nray_finish(result): Run after all Ray tasks have finished\nexecuting and the final result has been returned.\n\n\nSee the docstring for\nRayDaskCallback.__init__() <ray.util.dask.callbacks.RayDaskCallback>.__init__()\nfor further details about these callbacks, their arguments, and their return\nvalues.\nWhen creating your own callbacks, you can use\nRayDaskCallback\ndirectly, passing the callback functions as constructor arguments:\ndef my_presubmit_cb(task, key, deps):\n    print(f\"About to submit task {key}!\")\n\nwith RayDaskCallback(ray_presubmit=my_presubmit_cb):\n    z.compute(scheduler=ray_dask_get)\n\n\nor you can subclass it, implementing the callback methods that you need:\nclass MyPresubmitCallback(RayDaskCallback):\n    def _ray_presubmit(self, task, key, deps):\n        print(f\"About to submit task {key}!\")\n\nwith MyPresubmitCallback():\n    z.compute(scheduler=ray_dask_get)\n\n\nYou can also specify multiple callbacks:\n# The hooks for both MyTimerCallback and MyPresubmitCallback will be\n# called.\nwith MyTimerCallback(), MyPresubmitCallback():\n    z.compute(scheduler=ray_dask_get)\n\n\nCombining Dask callbacks with an actor yields simple patterns for stateful data\naggregation, such as capturing task execution statistics and caching results.\nHere is an example that does both, caching the result of a task if its\nexecution time exceeds some user-defined threshold:\n@ray.remote\nclass SimpleCacheActor:\n    def __init__(self):\n        self.cache = {}\n\n    def get(self, key):\n        # Raises KeyError if key isn't in cache.\n        return self.cache[key]\n\n    def put(self, key, value):\n        self.cache[key] = value\n\n\nclass SimpleCacheCallback(RayDaskCallback):\n    def __init__(self, cache_actor_handle, put_threshold=10):\n        self.cache_actor = cache_actor_handle\n        self.put_threshold = put_threshold\n\n    def _ray_presubmit(self, task, key, deps):\n        try:\n            return ray.get(self.cache_actor.get.remote(str(key)))\n        except KeyError:\n            return None\n\n    def _ray_pretask(self, key, object_refs):\n        start_time = timer()\n        return start_time\n\n    def _ray_posttask(self, key, result, pre_state):\n        execution_time = timer() - pre_state\n        if execution_time > self.put_threshold:\n            self.cache_actor.put.remote(str(key), result)\n\n\ncache_actor = SimpleCacheActor.remote()\ncache_callback = SimpleCacheCallback(cache_actor, put_threshold=2)\nwith cache_callback:\n    z.compute(scheduler=ray_dask_get)\n\n\n\nNote\nThe existing Dask scheduler callbacks (start, start_state,\npretask, posttask, finish) are also available, which can be used to\nintrospect the Dask task to Ray task conversion process, but note that the pretask\nand posttask hooks are executed before and after the Ray task is submitted, not\nexecuted, and that finish is executed after all Ray tasks have been\nsubmitted, not executed.\n\nThis callback API is currently unstable and subject to change.\n\n\n\n"
+        },
+        "8352d73f-f9e6-4bf5-8bf9-2727a808ad22": {
+            "source": "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.offline.json_reader.JsonReader.tf_input_ops.html#ray-rllib-offline-json-reader-jsonreader-tf-input-ops",
+            "text": "ray.rllib.offline.json_reader.JsonReader.tf_input_ops#\n\n\nJsonReader.tf_input_ops(queue_size: int = 1) \u2192 Dict[str, Union[numpy.array, jnp.ndarray, tf.Tensor, torch.Tensor]]#\nReturns TensorFlow queue ops for reading inputs from this reader.\nThe main use of these ops is for integration into custom model losses.\nFor example, you can use tf_input_ops() to read from files of external\nexperiences to add an imitation learning loss to your model.\nThis method creates a queue runner thread that will call next() on this\nreader repeatedly to feed the TensorFlow queue.\n\nParameters\nqueue_size \u2013 Max elements to allow in the TF queue.\n\n\nExample\n>>> from ray.rllib.models.modelv2 import ModelV2\n>>> from ray.rllib.offline.json_reader import JsonReader\n>>> imitation_loss = ... # doctest +SKIP\n>>> class MyModel(ModelV2): # doctest +SKIP\n...     def custom_loss(self, policy_loss, loss_inputs):\n...         reader = JsonReader(...)\n...         input_ops = reader.tf_input_ops()\n...         logits, _ = self._build_layers_v2(\n...             {\"obs\": input_ops[\"obs\"]},\n...             self.num_outputs, self.options)\n...         il_loss = imitation_loss(logits, input_ops[\"action\"])\n...         return policy_loss + il_loss\n\n\nYou can find a runnable version of this in examples/custom_loss.py.\n\nReturns\nDict of Tensors, one for each column of the read SampleBatch.\n\n\n\n\n\n"
+        },
+        "fdb28b57-9bd3-43de-b39d-3c6cedf0a076": {
+            "source": "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.core.rl_module.rl_module.SingleAgentRLModuleSpec.to_dict.html#ray-rllib-core-rl-module-rl-module-singleagentrlmodulespec-to-dict",
+            "text": "ray.rllib.core.rl_module.rl_module.SingleAgentRLModuleSpec.to_dict#\n\n\nSingleAgentRLModuleSpec.to_dict()[source]#\nReturns a serialized representation of the spec.\n\n\n\n"
+        },
+        "61003e26-716c-4070-a6b0-8bab3f986892": {
+            "source": "https://docs.ray.io/en/master/tune/api/result_grid.html#experimentanalysis-tune-experimentanalysis",
+            "text": "ExperimentAnalysis (tune.ExperimentAnalysis)#\n\nNote\nAn ExperimentAnalysis is the output of the tune.run API.\nIt\u2019s now recommended to use Tuner.fit,\nwhich outputs a ResultGrid object.\n\n\n\n\n\n\n\nExperimentAnalysis(experiment_checkpoint_path)\nAnalyze results from a Tune experiment.\n\n\n\n\n\n\n"
+        },
+        "4ec9faeb-49ac-4c31-846d-789b3063cbfc": {
+            "source": "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.algorithms.algorithm.Algorithm.trial_id.html#ray-rllib-algorithms-algorithm-algorithm-trial-id",
+            "text": "ray.rllib.algorithms.algorithm.Algorithm.trial_id#\n\n\nproperty Algorithm.trial_id#\nTrial ID for the corresponding trial of this Trainable.\nThis is not set if not using Tune.\nfrom ray.tune import Trainable\n\ntrial_id = Trainable().trial_id\n\n\n\n\n\n"
+        },
+        "f1fa55ea-c10c-48a5-b2d9-e90e61028811": {
+            "source": "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.algorithms.algorithm.Algorithm.step.html#ray-rllib-algorithms-algorithm-algorithm-step",
+            "text": "ray.rllib.algorithms.algorithm.Algorithm.step#\n\n\nAlgorithm.step() \u2192 dict[source]#\nImplements the main Algorithm.train() logic.\nTakes n attempts to perform a single training step. Thereby\ncatches RayErrors resulting from worker failures. After n attempts,\nfails gracefully.\nOverride this method in your Algorithm sub-classes if you would like to\nhandle worker failures yourself.\nOtherwise, override only training_step() to implement the core\nalgorithm logic.\n\nReturns\nThe results dict with stats/infos on sampling, training,\nand - if required - evaluation.\n\n\n\n\n\n"
+        },
+        "717c09f6-1280-4fde-8692-c1ccf6ac018b": {
+            "source": "https://docs.ray.io/en/master/rllib/rllib-training.html#specifying-exploration-options",
+            "text": "Specifying Exploration Options#\n\n\nAlgorithmConfig.exploration(*, explore: Optional[bool] = <ray.rllib.utils.from_config._NotProvided object>, exploration_config: Optional[dict] = <ray.rllib.utils.from_config._NotProvided object>) \u2192 ray.rllib.algorithms.algorithm_config.AlgorithmConfig[source]\nSets the config\u2019s exploration settings.\n\nParameters\n\nexplore \u2013 Default exploration behavior, iff explore=None is passed into\ncompute_action(s). Set to False for no exploration behavior (e.g.,\nfor evaluation).\nexploration_config \u2013 A dict specifying the Exploration object\u2019s config.\n\n\nReturns\nThis updated AlgorithmConfig object.\n\n\n\n\n\n"
+        },
+        "4db3c64f-48d6-4196-bfdf-35e5efd1654e": {
+            "source": "https://docs.ray.io/en/master/cluster/vms/references/ray-cluster-configuration.html#provider-use-internal-ips",
+            "text": "provider.use_internal_ips#\nIf enabled, Ray will use private IP addresses for communication between nodes.\nThis should be omitted if your network interfaces use public IP addresses.\nIf enabled, Ray CLI commands (e.g. ray up) will have to be run from a machine\nthat is part of the same VPC as the cluster.\nThis option does not affect the existence of public IP addresses for the nodes, it only\naffects which IP addresses are used by Ray. The existence of public IP addresses is\ncontrolled by your cloud provider\u2019s configuration.\n\nRequired: No\nImportance: Low\nType: Boolean\nDefault: False\n\n\n\n"
+        },
+        "7df70c69-69b0-45c2-bcff-4a2712e441f8": {
+            "source": "https://docs.ray.io/en/master/tune/api/suggestion.html#sigopt-tune-search-sigopt-sigoptsearch",
+            "text": "SigOpt (tune.search.sigopt.SigOptSearch)#\nYou will need to use the SigOpt experiment and space specification\nto specify your search space.\n\n\n\n\n\n\nsigopt.SigOptSearch([space,\u00a0name,\u00a0...])\nA wrapper around SigOpt to provide trial suggestions.\n\n\n\n\n\n"
+        },
+        "c3943270-6ad4-4e62-b0a2-519521b0d37a": {
+            "source": "https://docs.ray.io/en/master/ray-core/api/doc/ray.cross_language.java_function.html#ray-cross-language-java-function",
+            "text": "ray.cross_language.java_function#\n\n\nray.cross_language.java_function(class_name: str, function_name: str)[source]#\nDefine a Java function.\n\nParameters\n\nclass_name \u2013 Java class name.\nfunction_name \u2013 Java function name.\n\n\n\nPublicAPI (beta): This API is in beta and may change before becoming stable.\n\n\n\n"
+        },
+        "b5f0f853-f963-4143-a7ce-e472a0640b5c": {
+            "source": "https://docs.ray.io/en/master/train/examples/lightning/vicuna_13b_lightning_deepspeed_finetune.html#define-a-lightning-module",
+            "text": "Define a Lightning Module#\nHere we load the pre-trained model weights from HuggingFace Model Hub, and wrap them into pl.LightningModule. We adopted the efficient model initialization techniques introduced in Lightning-transformers to avoid unnecessary full weights loading.\n\n\nimport torch\nimport transformers\nimport pytorch_lightning as pl\nfrom transformers import AutoTokenizer, AutoModelForCausalLM\nfrom deepspeed.ops.adam import DeepSpeedCPUAdam\n\n\nclass ZeRO3Config:\n    def __init__(self, pl_module):\n        self.config = pl_module.trainer.strategy.config\n\n    def __call__(self, *args, **kwargs):\n        return self\n\n    def is_zero3(self) -> bool:\n        return True\n\n\ndef enable_transformers_pretrained_deepspeed_sharding(\n    pl_module: \"pl.LightningModule\",\n) -> None:\n    transformers.deepspeed._hf_deepspeed_config_weak_ref = ZeRO3Config(pl_module)\n\n\nclass Vicuna13BModel(pl.LightningModule):\n    def __init__(self):\n        super().__init__()\n        # Enable tf32 for better performance\n        torch.backends.cuda.matmul.allow_tf32 = True\n\n    def setup(self, stage) -> None:\n        # Defer model initialization to inject deepspeed configs to HF.\n        # During initialization, HF transformers can immediately partition \n        # the model across all gpus avoid the overhead in time and memory \n        # copying it on CPU or each GPU first.\n        enable_transformers_pretrained_deepspeed_sharding(self)\n        self.model = AutoModelForCausalLM.from_pretrained(MODEL_NAME)\n        if self.global_rank == 0:\n            print(\"DeepSpeed Configs: \", self.trainer.strategy.config)\n            print(\"Model Archetecture: \", self.model)\n\n    def forward(self, batch):\n        outputs = self.model(\n            batch[\"input_ids\"],\n            labels=batch[\"labels\"],\n            attention_mask=batch[\"attention_mask\"],\n        )\n        return outputs.loss\n\n    def training_step(self, batch, batch_idx):\n        loss = self.forward(batch)\n        self.log(\"train_loss\", loss, prog_bar=True, on_step=True, sync_dist=True)\n        return loss\n\n    def configure_optimizers(self):\n        return DeepSpeedCPUAdam(self.parameters(), lr=2e-5, weight_decay=0.01)\n\n\n\n\n[2023-06-30 17:39:35,109] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)\n\n\n\n\n\n\n"
+        },
+        "b79fbea2-ca8f-49f8-993a-39ffe417345c": {
+            "source": "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.core.learner.learner.Learner._check_is_built.html#ray-rllib-core-learner-learner-learner-check-is-built",
+            "text": "ray.rllib.core.learner.learner.Learner._check_is_built#\n\n\nLearner._check_is_built()[source]#\n\n\n\n"
+        },
+        "f3d843c6-2674-492e-9523-ca4e1e02c38d": {
+            "source": "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.utils.replay_buffers.replay_buffer.ReplayBuffer.stats.html#ray-rllib-utils-replay-buffers-replay-buffer-replaybuffer-stats",
+            "text": "ray.rllib.utils.replay_buffers.replay_buffer.ReplayBuffer.stats#\n\n\nReplayBuffer.stats(debug: bool = False) \u2192 dict[source]#\nReturns the stats of this buffer.\n\nParameters\ndebug \u2013 If True, adds sample eviction statistics to the returned\nstats dict.\n\nReturns\nA dictionary of stats about this buffer.\n\n\nDeveloperAPI: This API may change across minor Ray releases.\n\n\n\n"
+        },
+        "fc545751-72ed-4238-95ca-bb871331412e": {
+            "source": "https://docs.ray.io/en/master/cluster/kubernetes/troubleshooting/rayservice-troubleshooting.html#issue-8-a-loop-of-restarting-the-raycluster-occurs-when-the-kubernetes-cluster-runs-out-of-resources-kuberay-v0-6-1-or-earlier",
+            "text": "Issue 8: A loop of restarting the RayCluster occurs when the Kubernetes cluster runs out of resources. (KubeRay v0.6.1 or earlier)#\n\nNote: Currently, the KubeRay operator does not have a clear plan to handle situations where the Kubernetes cluster runs out of resources.\nTherefore, we recommend ensuring that the Kubernetes cluster has sufficient resources to accommodate the serve application.\n\nIf the status of a serve application remains non-RUNNING for more than serviceUnhealthySecondThreshold seconds,\nthe KubeRay operator will consider the RayCluster as unhealthy and initiate the preparation of a new RayCluster.\nA common cause of this issue is that the Kubernetes cluster does not have enough resources to accommodate the serve application.\nIn such cases, the KubeRay operator may continue to restart the RayCluster, leading to a loop of restarts.\nWe can also perform an experiment to reproduce this situation:\n\nA Kubernetes cluster with an 8-CPUs node\nray-service.insufficient-resources.yaml\n\nRayCluster:\n\nThe cluster has 1 head Pod with 4 physical CPUs, but num-cpus is set to 0 in rayStartParams to prevent any serve replicas from being scheduled on the head Pod.\nThe cluster also has 1 worker Pod with 1 CPU by default.\n\n\nserveConfigV2 specifies 5 serve deployments, each with 1 replica and a requirement of 1 CPU.\n\n\n\n# Step 1: Get the number of CPUs available on the node\nkubectl get nodes -o custom-columns=NODE:.metadata.name,ALLOCATABLE_CPU:.status.allocatable.cpu\n\n# [Example output]\n# NODE                 ALLOCATABLE_CPU\n# kind-control-plane   8\n\n# Step 2: Install a KubeRay operator.\n\n# Step 3: Create a RayService with autoscaling enabled.\nkubectl apply -f ray-service.insufficient-resources.yaml\n\n# Step 4: The Kubernetes cluster will not have enough resources to accommodate the serve application.\nkubectl describe rayservices.ray.io rayservice-sample -n $YOUR_NAMESPACE\n\n# [Example output]\n# fruit_app_DAGDriver:\n#   Health Last Update Time:  2023-07-11T02:10:02Z\n#   Last Update Time:         2023-07-11T02:10:35Z\n#   Message:                  Deployment \"fruit_app_DAGDriver\" has 1 replicas that have taken more than 30s to be scheduled. This may be caused by waiting for the cluster to auto-scale, or waiting for a runtime environment to install. Resources required for each replica: {\"CPU\": 1.0}, resources available: {}.\n#   Status:                   UPDATING\n\n# Step 5: A new RayCluster will be created after `serviceUnhealthySecondThreshold` (300s here) seconds.\n# Check the logs of the KubeRay operator to find the reason for restarting the RayCluster.\nkubectl logs $KUBERAY_OPERATOR_POD -n $YOUR_NAMESPACE | tee operator-log\n\n# [Example output]\n# 2023-07-11T02:14:58.109Z\tINFO\tcontrollers.RayService\tRestart RayCluster\t{\"appName\": \"fruit_app\", \"restart reason\": \"The status of the serve application fruit_app has not been RUNNING for more than 300.000000 seconds. Hence, KubeRay operator labels the RayCluster unhealthy and will prepare a new RayCluster.\"}\n# 2023-07-11T02:14:58.109Z\tINFO\tcontrollers.RayService\tRestart RayCluster\t{\"deploymentName\": \"fruit_app_FruitMarket\", \"appName\": \"fruit_app\", \"restart reason\": \"The status of the serve deployment fruit_app_FruitMarket or the serve application fruit_app has not been HEALTHY/RUNNING for more than 300.000000 seconds. Hence, KubeRay operator labels the RayCluster unhealthy and will prepare a new RayCluster. The message of the serve deployment is: Deployment \\\"fruit_app_FruitMarket\\\" has 1 replicas that have taken more than 30s to be scheduled. This may be caused by waiting for the cluster to auto-scale, or waiting for a runtime environment to install. Resources required for each replica: {\\\"CPU\\\": 1.0}, resources available: {}.\"}\n# .\n# .\n# .\n# 2023-07-11T02:14:58.122Z\tINFO\tcontrollers.RayService\tRestart RayCluster\t{\"ServiceName\": \"default/rayservice-sample\", \"AvailableWorkerReplicas\": 1, \"DesiredWorkerReplicas\": 5, \"restart reason\": \"The serve application is unhealthy, restarting the cluster. If the AvailableWorkerReplicas is not equal to DesiredWorkerReplicas, this may imply that the Autoscaler does not have enough resources to scale up the cluster. Hence, the serve application does not have enough resources to run. Please check https://github.com/ray-project/kuberay/blob/master/docs/guidance/rayservice-troubleshooting.md for more details.\", \"RayCluster\": {\"apiVersion\": \"ray.io/v1alpha1\", \"kind\": \"RayCluster\", \"namespace\": \"default\", \"name\": \"rayservice-sample-raycluster-hvd9f\"}}\n\n\n\n\n"
+        },
+        "c625dbea-7ec3-4206-be69-d9c9ac132f38": {
+            "source": "https://docs.ray.io/en/master/tune/tutorials/tune-stopping.html#early-stopping-with-tune-schedulers",
+            "text": "Early stopping with Tune schedulers#\nAnother way to stop Tune experiments is to use early stopping schedulers.\nThese schedulers monitor the performance of trials and stop them early if they are not making sufficient progress.\nAsyncHyperBandScheduler and HyperBandForBOHB are examples of early stopping schedulers built into Tune.\nSee the Tune scheduler API reference for a full list, as well as more realistic examples.\nIn the following example, we use both a dictionary stopping criteria along with an early-stopping criteria:\nfrom ray import train, tune\nfrom ray.tune.schedulers import AsyncHyperBandScheduler\n\n\nscheduler = AsyncHyperBandScheduler(time_attr=\"training_iteration\")\n\ntuner = tune.Tuner(\n    my_trainable,\n    run_config=train.RunConfig(stop={\"training_iteration\": 10}),\n    tune_config=tune.TuneConfig(\n        scheduler=scheduler, num_samples=2, metric=\"mean_accuracy\", mode=\"max\"\n    ),\n)\nresult_grid = tuner.fit()\n\n\n\n\n"
+        }
+    },
+    "relevant_docs": {
+        "366409ba-e815-4ce8-a958-b60608049a05": [
+            "https://docs.ray.io/en/master/workflows/api/management.html#workflow-management-api"
+        ],
+        "ee1205f1-cfa5-43ee-b63a-314aa8041b08": [
+            "https://docs.ray.io/en/master/workflows/api/management.html#workflow-management-api"
+        ],
+        "12221fe0-7e88-4334-889c-012717d822d3": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.utils.exploration.epsilon_greedy.EpsilonGreedy.on_episode_start.html#ray-rllib-utils-exploration-epsilon-greedy-epsilongreedy-on-episode-start"
+        ],
+        "5140928d-2eb9-4655-9c29-f5a201da6b6a": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.utils.exploration.epsilon_greedy.EpsilonGreedy.on_episode_start.html#ray-rllib-utils-exploration-epsilon-greedy-epsilongreedy-on-episode-start"
+        ],
+        "7adcc93d-37f7-44c8-b639-cbff7f3d2ce2": [
+            "https://docs.ray.io/en/master/tune/api/reporters.html#reporter-interface-tune-progressreporter"
+        ],
+        "4d08cdff-b84d-453d-b66d-bab9e86e2af9": [
+            "https://docs.ray.io/en/master/tune/api/reporters.html#reporter-interface-tune-progressreporter"
+        ],
+        "d6523f68-1bb0-43d8-baf1-81e33bb5597e": [
+            "https://docs.ray.io/en/master/tune/api/doc/ray.tune.Callback.on_trial_start.html#ray-tune-callback-on-trial-start"
+        ],
+        "5dbe60b8-1fe8-4d27-8c93-5628601741b7": [
+            "https://docs.ray.io/en/master/tune/api/doc/ray.tune.Callback.on_trial_start.html#ray-tune-callback-on-trial-start"
+        ],
+        "93013643-0205-44de-b990-81cde41e601f": [
+            "https://docs.ray.io/en/master/cluster/kubernetes/index.html#learn-more"
+        ],
+        "aa33a965-c0e2-468f-a2d2-abc250cbe002": [
+            "https://docs.ray.io/en/master/cluster/kubernetes/index.html#learn-more"
+        ],
+        "1252b00c-b048-4c8c-9501-918857e2f98d": [
+            "https://docs.ray.io/en/master/train/api/doc/ray.train.tensorflow.TensorflowCheckpoint.__init__.html#ray-train-tensorflow-tensorflowcheckpoint-init"
+        ],
+        "2c131d62-cb44-48d9-966c-e918e347ba03": [
+            "https://docs.ray.io/en/master/train/api/doc/ray.train.tensorflow.TensorflowCheckpoint.__init__.html#ray-train-tensorflow-tensorflowcheckpoint-init"
+        ],
+        "433b80f9-8279-4f32-b213-aeec218c3994": [
+            "https://docs.ray.io/en/master/ray-core/handling-dependencies.html#remote-uris"
+        ],
+        "aae517d9-8581-48e8-ab91-31224bc141e2": [
+            "https://docs.ray.io/en/master/ray-core/handling-dependencies.html#remote-uris"
+        ],
+        "4e6c0c54-6ce8-4dcb-8a6c-113a135fb1c4": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.evaluation.rollout_worker.RolloutWorker.get_node_ip.html#ray-rllib-evaluation-rollout-worker-rolloutworker-get-node-ip"
+        ],
+        "edd31bb8-18c9-473d-88f4-0226b58900f3": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.evaluation.rollout_worker.RolloutWorker.get_node_ip.html#ray-rllib-evaluation-rollout-worker-rolloutworker-get-node-ip"
+        ],
+        "180c849b-1fad-4715-9d3a-8b5944e8c9e6": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.core.learner.learner.Learner.get_optimizer_state.html#ray-rllib-core-learner-learner-learner-get-optimizer-state"
+        ],
+        "b6b8fa19-fb1b-4528-b26d-2515fb00b091": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.core.learner.learner.Learner.get_optimizer_state.html#ray-rllib-core-learner-learner-learner-get-optimizer-state"
+        ],
+        "e08b62ff-9576-4947-981c-2ed5a5a9427e": [
+            "https://docs.ray.io/en/master/train/api/doc/ray.train.ScalingConfig.resources_per_worker.html#ray-train-scalingconfig-resources-per-worker"
+        ],
+        "fec1b2a8-92ba-4e17-942e-92979ef21df6": [
+            "https://docs.ray.io/en/master/train/api/doc/ray.train.ScalingConfig.resources_per_worker.html#ray-train-scalingconfig-resources-per-worker"
+        ],
+        "2fb4df34-ad69-4582-9eba-9f2578486e64": [
+            "https://docs.ray.io/en/master/data/transforming-data.html#groupby-and-transforming-groups"
+        ],
+        "86f6eade-5884-4e52-948d-cd8c4a81df2a": [
+            "https://docs.ray.io/en/master/data/transforming-data.html#groupby-and-transforming-groups"
+        ],
+        "49a60453-5193-4f12-b29c-6075b803a080": [
+            "https://docs.ray.io/en/master/ray-core/patterns/limit-running-tasks.html#pattern-using-resources-to-limit-the-number-of-concurrently-running-tasks"
+        ],
+        "5b9a67d0-3046-464e-a743-e9eca46501a7": [
+            "https://docs.ray.io/en/master/ray-core/patterns/limit-running-tasks.html#pattern-using-resources-to-limit-the-number-of-concurrently-running-tasks"
+        ],
+        "c7940e28-8518-4352-a324-671190aedd81": [
+            "https://docs.ray.io/en/master/train/user-guides/results.html#dataframe-of-all-reported-metrics"
+        ],
+        "a1f081b9-9507-488c-81d4-7fb2ce4d2f18": [
+            "https://docs.ray.io/en/master/train/user-guides/results.html#dataframe-of-all-reported-metrics"
+        ],
+        "83a218ca-61d1-4b2e-a004-0c759a368653": [
+            "https://docs.ray.io/en/master/ray-core/patterns/tree-of-actors.html#code-example"
+        ],
+        "c6afd274-d629-4d89-be26-e350c9874f5d": [
+            "https://docs.ray.io/en/master/ray-core/patterns/tree-of-actors.html#code-example"
+        ],
+        "81dd9357-a9be-43f2-9c5d-a1dd7c9dc4dc": [
+            "https://docs.ray.io/en/master/tune/tutorials/tune-lifecycle.html#searchalg"
+        ],
+        "2a3ce491-6d1c-4978-94f7-3526baaf48ad": [
+            "https://docs.ray.io/en/master/tune/tutorials/tune-lifecycle.html#searchalg"
+        ],
+        "0b15276a-7c7a-47ee-8536-16a674bb2040": [
+            "https://docs.ray.io/en/master/data/api/execution_options.html#executionoptions-api"
+        ],
+        "85076d3d-ff13-4738-8908-1cdb5ba8994e": [
+            "https://docs.ray.io/en/master/data/api/execution_options.html#executionoptions-api"
+        ],
+        "169d0651-304e-427b-8356-79bf9628d4cd": [
+            "https://docs.ray.io/en/master/installation.html#windows-support"
+        ],
+        "9ce01203-a7c6-4bb5-823b-7d33289aa959": [
+            "https://docs.ray.io/en/master/installation.html#windows-support"
+        ],
+        "b7bc08e6-ab01-4c86-8c9d-a56ccfc07856": [
+            "https://docs.ray.io/en/master/ray-core/scheduling/placement-group.html#advanced-named-placement-group"
+        ],
+        "8bc8fbf1-876a-4e2c-ab32-bab5a34a0f96": [
+            "https://docs.ray.io/en/master/ray-core/scheduling/placement-group.html#advanced-named-placement-group"
+        ],
+        "31bb3056-8858-46d6-b619-c195c7d42a45": [
+            "https://docs.ray.io/en/master/serve/advanced-guides/performance.html#performance-and-known-benchmarks"
+        ],
+        "5c8a4b99-ccb7-4cef-88a4-8b02474190d4": [
+            "https://docs.ray.io/en/master/serve/advanced-guides/performance.html#performance-and-known-benchmarks"
+        ],
+        "447c75dc-24b3-4bac-9e4e-ae66909e049a": [
+            "https://docs.ray.io/en/master/ray-core/examples/batch_prediction.html#batch-prediction-with-ray-core"
+        ],
+        "8d4d04a9-d11c-4789-b7b6-bb369f8c351c": [
+            "https://docs.ray.io/en/master/ray-core/examples/batch_prediction.html#batch-prediction-with-ray-core"
+        ],
+        "47624de0-1783-4c85-999e-c8a3b83a432c": [
+            "https://docs.ray.io/en/master/tune/api/doc/ray.tune.search.sigopt.SigOptSearch.on_trial_complete.html#ray-tune-search-sigopt-sigoptsearch-on-trial-complete"
+        ],
+        "d59e81c0-a82c-433e-8143-f7e733696eef": [
+            "https://docs.ray.io/en/master/tune/api/doc/ray.tune.search.sigopt.SigOptSearch.on_trial_complete.html#ray-tune-search-sigopt-sigoptsearch-on-trial-complete"
+        ],
+        "7f284ae8-c882-4b37-83e0-a07c9b194abb": [
+            "https://docs.ray.io/en/master/data/api/doc/ray.data.Dataset.default_batch_format.html#ray-data-dataset-default-batch-format"
+        ],
+        "d70039e2-00d7-4dc3-879b-01028c60c4d8": [
+            "https://docs.ray.io/en/master/data/api/doc/ray.data.Dataset.default_batch_format.html#ray-data-dataset-default-batch-format"
+        ],
+        "19dd36db-845b-48c1-a090-9cc3114c6dfc": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.utils.replay_buffers.replay_buffer.ReplayBuffer.__init__.html#ray-rllib-utils-replay-buffers-replay-buffer-replaybuffer-init"
+        ],
+        "d710c0fb-a49b-478c-b678-106f20e7b44f": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.utils.replay_buffers.replay_buffer.ReplayBuffer.__init__.html#ray-rllib-utils-replay-buffers-replay-buffer-replaybuffer-init"
+        ],
+        "9f55b226-a029-4fc0-a7e4-30375f44d96f": [
+            "https://docs.ray.io/en/master/tune/faq.html#how-can-i-run-multiple-ray-tune-jobs-on-the-same-cluster-at-the-same-time-multi-tenancy"
+        ],
+        "7010a7bf-cc2d-476d-bd95-bb79aeb76f49": [
+            "https://docs.ray.io/en/master/tune/faq.html#how-can-i-run-multiple-ray-tune-jobs-on-the-same-cluster-at-the-same-time-multi-tenancy"
+        ],
+        "3c6aeee0-4aba-435f-bffe-7f53c0aedbd2": [
+            "https://docs.ray.io/en/master/cluster/running-applications/job-submission/ray-client.html#how-do-you-use-the-ray-client"
+        ],
+        "eeb9fd61-5f24-4b52-9c2e-06e0d4a18c2d": [
+            "https://docs.ray.io/en/master/cluster/running-applications/job-submission/ray-client.html#how-do-you-use-the-ray-client"
+        ],
+        "6ca2a3ca-bf95-4f42-b40f-4f07ab610f51": [
+            "https://docs.ray.io/en/master/data/api/doc/ray.data.Datasource.do_write.html#ray-data-datasource-do-write"
+        ],
+        "e22f99f2-1255-469c-b39d-7a6c19853e9c": [
+            "https://docs.ray.io/en/master/data/api/doc/ray.data.Datasource.do_write.html#ray-data-datasource-do-write"
+        ],
+        "19cd44da-b362-48bf-8c5f-2ac1113932ae": [
+            "https://docs.ray.io/en/master/_modules/ray/rllib/utils/annotations.html"
+        ],
+        "c7b0155c-cf35-42e2-bbfc-193b5cd98cd4": [
+            "https://docs.ray.io/en/master/_modules/ray/rllib/utils/annotations.html"
+        ],
+        "9da9c657-669e-4fc5-ac20-77c1dae63724": [
+            "https://docs.ray.io/en/master/ray-more-libs/actors.html#calling-the-actor"
+        ],
+        "0254a444-7252-4fbf-83c8-1d586d0813c4": [
+            "https://docs.ray.io/en/master/ray-more-libs/actors.html#calling-the-actor"
+        ],
+        "758b1be9-d69e-497c-8856-eb0c39da59dd": [
+            "https://docs.ray.io/en/master/rllib/package_ref/policy.html#making-models"
+        ],
+        "f0d1784c-ae69-444c-a3b5-a2bbfa0c611b": [
+            "https://docs.ray.io/en/master/rllib/package_ref/policy.html#making-models"
+        ],
+        "66921e6f-1a28-4ce0-a181-2f935335480d": [
+            "https://docs.ray.io/en/master/data/api/doc/ray.data.preprocessors.RobustScaler.preferred_batch_format.html#ray-data-preprocessors-robustscaler-preferred-batch-format"
+        ],
+        "c07fe9b0-1648-4c72-bd2c-224a4bf2768f": [
+            "https://docs.ray.io/en/master/data/api/doc/ray.data.preprocessors.RobustScaler.preferred_batch_format.html#ray-data-preprocessors-robustscaler-preferred-batch-format"
+        ],
+        "ac5a7048-35df-446c-b4b1-702a2e3d759c": [
+            "https://docs.ray.io/en/master/data/preprocessors.html#implementing-custom-preprocessors"
+        ],
+        "7a793760-69c9-45d7-9cd6-c33c20177c1a": [
+            "https://docs.ray.io/en/master/data/preprocessors.html#implementing-custom-preprocessors"
+        ],
+        "1ede58d4-1c08-426f-882b-5af259ab4b74": [
+            "https://docs.ray.io/en/master/tune/tutorials/tune-lifecycle.html#how-does-tune-work"
+        ],
+        "b55da8c2-43fc-4e1f-b4c5-3dce1eb5c138": [
+            "https://docs.ray.io/en/master/tune/tutorials/tune-lifecycle.html#how-does-tune-work"
+        ],
+        "a4940d6a-e3c5-4b7d-8375-0acafe94a430": [
+            "https://docs.ray.io/en/master/data/working-with-text.html#saving-text"
+        ],
+        "b1908f36-9e38-44f7-9525-314e700684de": [
+            "https://docs.ray.io/en/master/data/working-with-text.html#saving-text"
+        ],
+        "c5d6c5e4-c05e-4e91-9acb-f136dc1ef39c": [
+            "https://docs.ray.io/en/master/tune/api/doc/ray.tune.Trainable.logdir.html#ray-tune-trainable-logdir"
+        ],
+        "6ace8e10-4984-4030-a58d-caa9c664b6c1": [
+            "https://docs.ray.io/en/master/tune/api/doc/ray.tune.Trainable.logdir.html#ray-tune-trainable-logdir"
+        ],
+        "a8ce37fb-3a5a-49d8-8d7e-96ceb996d0f2": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.policy.torch_policy_v2.TorchPolicyV2.make_model.html#ray-rllib-policy-torch-policy-v2-torchpolicyv2-make-model"
+        ],
+        "2a8415d2-358f-47bb-9923-36bc896604b6": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.policy.torch_policy_v2.TorchPolicyV2.make_model.html#ray-rllib-policy-torch-policy-v2-torchpolicyv2-make-model"
+        ],
+        "340026a3-fbba-4190-a738-b27cd1483f13": [
+            "https://docs.ray.io/en/master/tune/api/doc/ray.tune.with_parameters.html#ray-tune-with-parameters"
+        ],
+        "d43e22a4-dd34-465b-8178-0dab7596c7b4": [
+            "https://docs.ray.io/en/master/tune/api/doc/ray.tune.with_parameters.html#ray-tune-with-parameters"
+        ],
+        "cb043198-e546-4570-a419-705701eb1b67": [
+            "https://docs.ray.io/en/master/train/distributed-tensorflow-keras.html#running-your-training-function"
+        ],
+        "3088c78c-e214-4796-a482-bdf603efa464": [
+            "https://docs.ray.io/en/master/train/distributed-tensorflow-keras.html#running-your-training-function"
+        ],
+        "124042ce-692b-4694-833a-67dc4c720f84": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.policy.sample_batch.SampleBatch.clear.html#ray-rllib-policy-sample-batch-samplebatch-clear"
+        ],
+        "5f1cbb82-60df-404f-bdee-378e1faebc97": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.policy.sample_batch.SampleBatch.clear.html#ray-rllib-policy-sample-batch-samplebatch-clear"
+        ],
+        "2061989c-30b6-4a21-955b-b5f0f5f297c4": [
+            "https://docs.ray.io/en/master/ray-contribute/getting-involved.html#for-contributors-who-are-in-the-ray-project-organization"
+        ],
+        "98b2865d-dd86-4edd-957c-189fc29d7a30": [
+            "https://docs.ray.io/en/master/ray-contribute/getting-involved.html#for-contributors-who-are-in-the-ray-project-organization"
+        ],
+        "1ff92a92-04f2-4995-8139-dc56ab0540c9": [
+            "https://docs.ray.io/en/master/tune/api/doc/ray.tune.search.flaml.CFO.html#ray-tune-search-flaml-cfo"
+        ],
+        "e1a28618-27fb-4519-9671-6e16c7b9d24c": [
+            "https://docs.ray.io/en/master/tune/api/doc/ray.tune.search.flaml.CFO.html#ray-tune-search-flaml-cfo"
+        ],
+        "f817ddac-e61b-463a-8608-43304e23cd2f": [
+            "https://docs.ray.io/en/master/ray-core/scheduling/index.html#spread"
+        ],
+        "05383f10-cb11-419e-9133-cb6a0d464b5c": [
+            "https://docs.ray.io/en/master/ray-core/scheduling/index.html#spread"
+        ],
+        "09a36f8a-d1a8-42d8-961a-748b072abbeb": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.utils.replay_buffers.reservoir_replay_buffer.ReservoirReplayBuffer.stats.html#ray-rllib-utils-replay-buffers-reservoir-replay-buffer-reservoirreplaybuffer-stats"
+        ],
+        "15f69e34-7d76-4b18-82db-834d1529ac7c": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.utils.replay_buffers.reservoir_replay_buffer.ReservoirReplayBuffer.stats.html#ray-rllib-utils-replay-buffers-reservoir-replay-buffer-reservoirreplaybuffer-stats"
+        ],
+        "8459b6fc-3776-428c-b410-859c7706a407": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.policy.Policy.get_weights.html#ray-rllib-policy-policy-get-weights"
+        ],
+        "ba4871ce-084a-4733-99e8-c779ac73be7d": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.policy.Policy.get_weights.html#ray-rllib-policy-policy-get-weights"
+        ],
+        "8f8d4c11-0eea-4969-aaca-44415960bf2d": [
+            "https://docs.ray.io/en/master/ray-more-libs/dask-on-ray.html#callbacks"
+        ],
+        "a6115ade-10c3-41e7-a94d-d91ed398c54f": [
+            "https://docs.ray.io/en/master/ray-more-libs/dask-on-ray.html#callbacks"
+        ],
+        "2e83c5f2-21fd-4613-a0fa-b0585512f11a": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.offline.json_reader.JsonReader.tf_input_ops.html#ray-rllib-offline-json-reader-jsonreader-tf-input-ops"
+        ],
+        "d23bad62-2e4b-4ba0-b0ef-c02634945a30": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.offline.json_reader.JsonReader.tf_input_ops.html#ray-rllib-offline-json-reader-jsonreader-tf-input-ops"
+        ],
+        "03f3d7f5-0ccf-4a48-a706-b92a367aa4cb": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.core.rl_module.rl_module.SingleAgentRLModuleSpec.to_dict.html#ray-rllib-core-rl-module-rl-module-singleagentrlmodulespec-to-dict"
+        ],
+        "31cf38c4-5409-40e4-ac5e-3cce4d402e1d": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.core.rl_module.rl_module.SingleAgentRLModuleSpec.to_dict.html#ray-rllib-core-rl-module-rl-module-singleagentrlmodulespec-to-dict"
+        ],
+        "ba55dd3b-cd20-4ac8-85c5-13c76b38ca29": [
+            "https://docs.ray.io/en/master/tune/api/result_grid.html#experimentanalysis-tune-experimentanalysis"
+        ],
+        "5015d3d5-9fd7-4b6b-a15e-d15617c0d6ba": [
+            "https://docs.ray.io/en/master/tune/api/result_grid.html#experimentanalysis-tune-experimentanalysis"
+        ],
+        "183b6f56-1a9a-496c-8276-b5003f375e98": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.algorithms.algorithm.Algorithm.trial_id.html#ray-rllib-algorithms-algorithm-algorithm-trial-id"
+        ],
+        "d8fb54aa-dc61-43ee-961c-6af6ecbcad46": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.algorithms.algorithm.Algorithm.trial_id.html#ray-rllib-algorithms-algorithm-algorithm-trial-id"
+        ],
+        "58d9ae64-a92e-4b93-b86f-7cb56f96d53f": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.algorithms.algorithm.Algorithm.step.html#ray-rllib-algorithms-algorithm-algorithm-step"
+        ],
+        "67bdc761-e0a7-40f7-8bc5-42fb8b0dc02c": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.algorithms.algorithm.Algorithm.step.html#ray-rllib-algorithms-algorithm-algorithm-step"
+        ],
+        "73165abd-1f02-40b2-b7ff-57236ef02918": [
+            "https://docs.ray.io/en/master/rllib/rllib-training.html#specifying-exploration-options"
+        ],
+        "88346b33-cc86-4264-a65d-b43cba5927ca": [
+            "https://docs.ray.io/en/master/rllib/rllib-training.html#specifying-exploration-options"
+        ],
+        "6af8ee61-3aec-42d1-8aa4-04ef9f8458ac": [
+            "https://docs.ray.io/en/master/cluster/vms/references/ray-cluster-configuration.html#provider-use-internal-ips"
+        ],
+        "711d9b3e-b618-4413-b7fa-d31ee4c2404f": [
+            "https://docs.ray.io/en/master/cluster/vms/references/ray-cluster-configuration.html#provider-use-internal-ips"
+        ],
+        "d433be17-0d36-4524-b152-6cb3e848f29f": [
+            "https://docs.ray.io/en/master/tune/api/suggestion.html#sigopt-tune-search-sigopt-sigoptsearch"
+        ],
+        "2ec93078-b394-4914-a5c5-2ae7040f3190": [
+            "https://docs.ray.io/en/master/tune/api/suggestion.html#sigopt-tune-search-sigopt-sigoptsearch"
+        ],
+        "ac1e6487-7275-4fe6-91f8-d13173879f3d": [
+            "https://docs.ray.io/en/master/ray-core/api/doc/ray.cross_language.java_function.html#ray-cross-language-java-function"
+        ],
+        "51e0f9d7-94c6-4306-8c84-61b4553cd2c7": [
+            "https://docs.ray.io/en/master/ray-core/api/doc/ray.cross_language.java_function.html#ray-cross-language-java-function"
+        ],
+        "d2eb1f3e-8e24-4bb3-b4c4-5bf00fd1aaee": [
+            "https://docs.ray.io/en/master/train/examples/lightning/vicuna_13b_lightning_deepspeed_finetune.html#define-a-lightning-module"
+        ],
+        "8059d4f2-69b1-4f33-b99d-641f1273e803": [
+            "https://docs.ray.io/en/master/train/examples/lightning/vicuna_13b_lightning_deepspeed_finetune.html#define-a-lightning-module"
+        ],
+        "aa7e7e84-c8ee-43e1-b874-1fc91a36cdfe": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.core.learner.learner.Learner._check_is_built.html#ray-rllib-core-learner-learner-learner-check-is-built"
+        ],
+        "b219ba68-17df-4228-8d04-700166fa3542": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.core.learner.learner.Learner._check_is_built.html#ray-rllib-core-learner-learner-learner-check-is-built"
+        ],
+        "64c2979f-6d66-4b31-9cca-51ac6ca9d61a": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.utils.replay_buffers.replay_buffer.ReplayBuffer.stats.html#ray-rllib-utils-replay-buffers-replay-buffer-replaybuffer-stats"
+        ],
+        "c4610393-e834-462b-ae08-333f8a99dd38": [
+            "https://docs.ray.io/en/master/rllib/package_ref/doc/ray.rllib.utils.replay_buffers.replay_buffer.ReplayBuffer.stats.html#ray-rllib-utils-replay-buffers-replay-buffer-replaybuffer-stats"
+        ],
+        "ed51d2f2-6706-484f-8c15-9b26d7339953": [
+            "https://docs.ray.io/en/master/cluster/kubernetes/troubleshooting/rayservice-troubleshooting.html#issue-8-a-loop-of-restarting-the-raycluster-occurs-when-the-kubernetes-cluster-runs-out-of-resources-kuberay-v0-6-1-or-earlier"
+        ],
+        "fa92275b-b17a-4f39-8dae-0903898a7867": [
+            "https://docs.ray.io/en/master/cluster/kubernetes/troubleshooting/rayservice-troubleshooting.html#issue-8-a-loop-of-restarting-the-raycluster-occurs-when-the-kubernetes-cluster-runs-out-of-resources-kuberay-v0-6-1-or-earlier"
+        ],
+        "b439166b-63d5-4508-a9df-6d1c0903b9a7": [
+            "https://docs.ray.io/en/master/tune/tutorials/tune-stopping.html#early-stopping-with-tune-schedulers"
+        ],
+        "f9966f4b-2a8a-4a67-9478-8c93f222d23a": [
+            "https://docs.ray.io/en/master/tune/tutorials/tune-stopping.html#early-stopping-with-tune-schedulers"
+        ]
+    }
+}
